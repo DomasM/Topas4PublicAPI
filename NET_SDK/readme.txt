@@ -1,0 +1,1 @@
+This is the .dll you want to reference in your projects, if you plan to use Topas4 Public API via .NET dll (.NET framework 4.5.2 required).

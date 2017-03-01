@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Operations at /ShutterInterlock</title>
+    
+  <link rel="stylesheet" type="text/css" href="style.css"></head>
+  <body>
+    <div id="content">
+      <p class="heading1">Operations at /ShutterInterlock</p>
+      
+      <table>
+        <tr>
+          <th>Uri</th>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td class="Uri">/CloseLaserOutputBeforeChangingShutter</td>
+          <td title="/ShutterInterlock/CloseLaserOutputBeforeChangingShutter" class="HttpMethodNONGET">
+            <a rel="operation" href="CloseLaserOutputBeforeChangingShutter.html">PUT</a>
+          </td>
+          <td class="description">If set to true will try to close laser output before opening/closing shutter. Output will be enabled after shutter state change. Laser control has to be configured (see /OutputControlWithLaserState).</td>
+        </tr>
+        <tr>
+          <td class="Uri">/CloseShutter</td>
+          <td title="/ShutterInterlock/CloseShutter" class="HttpMethodNONGET">
+            <a rel="operation" href="SetShutterClose.html">PUT</a>
+          </td>
+          <td class="description">Closes shutter.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/IsInterlockOpen</td>
+          <td title="/ShutterInterlock/IsInterlockOpen" class="HttpMethodGET">
+            <a rel="operation" href="GetIsInterlockopen.html">GET</a>
+          </td>
+          <td class="description">Returns true if interlock is open and false otherwise.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/IsShutterOpen</td>
+          <td title="/ShutterInterlock/IsShutterOpen" class="HttpMethodGET">
+            <a rel="operation" href="GetIsShutterOpen.html">GET</a>
+          </td>
+          <td class="description">Returns true if shutter is open and false otherwise.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/OpenCloseShutter</td>
+          <td title="/ShutterInterlock/OpenCloseShutter" class="HttpMethodNONGET">
+            <a rel="operation" href="SetOpenCloseShutter.html">PUT</a>
+          </td>
+          <td class="description">Opens shutter if parameter is True, closes if false. If shutter can't be opened due safety reasons method returns HTTP code 200 (OK) and ignores command.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/OpenShutter</td>
+          <td title="/ShutterInterlock/OpenShutter" class="HttpMethodNONGET">
+            <a rel="operation" href="SetShutterOpen.html">PUT</a>
+          </td>
+          <td class="description">Opens shutter. If shutter can't be opened due safety reasons method returns HTTP code 200 (OK) and ignores command.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/OutputControlWithLaserState</td>
+          <td title="/ShutterInterlock/OutputControlWithLaserState" class="HttpMethodGET">
+            <a rel="operation" href="GetOutputControlWithLaserState.html">GET</a>
+          </td>
+          <td class="description">Get configuration and state of shutter control by lasers output control (i.e. pulse picker).</td>
+        </tr>
+        <tr>
+          <td class="Uri">/State</td>
+          <td title="/ShutterInterlock/State" class="HttpMethodGET">
+            <a rel="operation" href="GetState.html">GET</a>
+          </td>
+          <td class="description">Get state of shutter &amp; interlock unit.</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

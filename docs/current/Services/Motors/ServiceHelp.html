@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Operations at /Motors</title>
+    
+  <link rel="stylesheet" type="text/css" href="style.css"></head>
+  <body>
+    <div id="content">
+      <p class="heading1">Operations at /Motors</p>
+      
+      <table>
+        <tr>
+          <th>Uri</th>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td class="Uri">/ActualPosition</td>
+          <td title="/Motors/ActualPosition?id={MOTORINDEX}" class="HttpMethodGET">
+            <a rel="operation" href="GetActualPosition.html">GET</a>
+          </td>
+          <td class="description">Gets actual position of motor in steps. Postion is synced with hardware asynchronously.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/ActualPositionInUnits</td>
+          <td title="/Motors/ActualPositionInUnits?id={MOTORINDEX}" class="HttpMethodGET">
+            <a rel="operation" href="GetActualPositionInUnits.html">GET</a>
+          </td>
+          <td class="description">Gets actual position of motor in units (typically mm or deg). Postion is synced with hardware asynchronously.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/AllProperties</td>
+          <td title="/Motors/AllProperties" class="HttpMethodGET">
+            <a rel="operation" href="GetAllProperties.html">GET</a>
+          </td>
+          <td class="description">Gets all properties of all motors.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/PropertiesThatChangeOften</td>
+          <td title="/Motors/PropertiesThatChangeOften" class="HttpMethodGET">
+            <a rel="operation" href="GetPropertiesThatChangeOften.html">GET</a>
+          </td>
+          <td class="description">Gets often-changing properties properites of all motors.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/Stop</td>
+          <td title="/Motors/Stop?id={MOTORINDEX}" class="HttpMethodNONGET">
+            <a rel="operation" href="StopMotor.html">POST</a>
+          </td>
+          <td class="description">Stop motor.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/StopAll</td>
+          <td title="/Motors/StopAll" class="HttpMethodNONGET">
+            <a rel="operation" href="StopAllMotors.html">POST</a>
+          </td>
+          <td class="description">Stop all motors.</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="Uri">/TargetPosition</td>
+          <td title="/Motors/TargetPosition?id={MOTORINDEX}" class="HttpMethodGET">
+            <a rel="operation" href="GetTargetPosition.html">GET</a>
+          </td>
+          <td class="description">Gets target position of motor in steps.</td>
+        </tr>
+        <tr>
+          <td title="/Motors/TargetPosition?id={MOTORINDEX}" class="HttpMethodNONGET">
+            <a rel="operation" href="SetTargetPosition.html">PUT</a>
+          </td>
+          <td class="description">Sets target position in steps and starts moving motor towards it. Invalid positions are silently ignored. See /ActualPosition to know when (and if) motor reaches target position.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/TargetPositionInSuperUnits</td>
+          <td title="/Motors/TargetPositionInSuperUnits?id={MOTORINDEX}" class="HttpMethodNONGET">
+            <a rel="operation" href="SetTargetPositionInSuperUnits.html">PUT</a>
+          </td>
+          <td class="description">Sets target position in super units and starts moving motor towards it. Invalid positions are silently ignored. See ActualPositionInSuperUnits to know when (and if) motor reaches target position.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/TargetPositionInUnits</td>
+          <td title="/Motors/TargetPositionInUnits?id={MOTORINDEX}" class="HttpMethodNONGET">
+            <a rel="operation" href="SetTargetPositionInUnits.html">PUT</a>
+          </td>
+          <td class="description">Sets target position in units and starts moving motor towards it. Invalid positions are silently ignored. See ActualPositionInUnits to know when (and if) motor reaches target position.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/TargetPositionRelative</td>
+          <td title="/Motors/TargetPositionRelative?id={MOTORINDEX}" class="HttpMethodNONGET">
+            <a rel="operation" href="SetTargetPositionRelative.html">PUT</a>
+          </td>
+          <td class="description">Sets target position in steps relative to current target position and starts moving motor towards it. Invalid positions are silently ignored. See /ActualPosition to know when (and if) motor reaches target position.</td>
+        </tr>
+        <tr>
+          <td class="Uri">?id={motorIndex}</td>
+          <td title="/Motors/?id={MOTORINDEX}" class="HttpMethodGET">
+            <a rel="operation" href="GetMotor.html">GET</a>
+          </td>
+          <td class="description">Gets all properites of specific motor. If requested motor is not found or is not available due hardware failure error code 404 is returned.</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

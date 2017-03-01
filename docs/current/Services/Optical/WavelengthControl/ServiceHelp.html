@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Operations at /Optical/WavelengthControl</title>
+    
+  <link rel="stylesheet" type="text/css" href="style.css"></head>
+  <body>
+    <div id="content">
+      <p class="heading1">Operations at /Optical/WavelengthControl</p>
+      
+      <table>
+        <tr>
+          <th>Uri</th>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td class="Uri">/ExpandedInteractions</td>
+          <td title="/Optical/WavelengthControl/ExpandedInteractions" class="HttpMethodGET">
+            <a rel="operation" href="GetExpandedInteractions.html">GET</a>
+          </td>
+          <td class="description">Gets all interactions with their calibration ranges in current optical configuration expanded to simple representation.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/FinishWavelengthSettingAfterUserActions</td>
+          <td title="/Optical/WavelengthControl/FinishWavelengthSettingAfterUserActions" class="HttpMethodNONGET">
+            <a rel="operation" href="FinishWavelengthSettingAfterUserActions.html">PUT</a>
+          </td>
+          <td class="description">Client application should call this method after wavelength has been set and user's manual operations are completed.This method needs to be called onyl if setting wavelength required actions by user.If RestoreShutterState is true and shutter was open before setting wavelength it will be opened again.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/OpticalSystemData</td>
+          <td title="/Optical/WavelengthControl/OpticalSystemData" class="HttpMethodGET">
+            <a rel="operation" href="GetOpticalSystemData.html">GET</a>
+          </td>
+          <td class="description">Gets Information about current and last set wavelength and some additional info.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/Output</td>
+          <td title="/Optical/WavelengthControl/Output" class="HttpMethodGET">
+            <a rel="operation" href="GetOutput.html">GET</a>
+          </td>
+          <td class="description">Gets current output information (wavelength, interaction, calculated motor positions and so on).</td>
+        </tr>
+        <tr>
+          <td class="Uri">/Output/Interaction</td>
+          <td title="/Optical/WavelengthControl/Output/Interaction" class="HttpMethodGET">
+            <a rel="operation" href="GetOutputInteraction.html">GET</a>
+          </td>
+          <td class="description">Gets current output interaction string. If wavelength setting is in progress returns target wavelengths interaction.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/Output/Wavelength</td>
+          <td title="/Optical/WavelengthControl/Output/Wavelength" class="HttpMethodGET">
+            <a rel="operation" href="GetOutputWavelength.html">GET</a>
+          </td>
+          <td class="description">Gets current output wavelength. If wavelength setting is in progress returns target wavelength.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/PossibleOutputsForWavelength</td>
+          <td title="/Optical/WavelengthControl/PossibleOutputsForWavelength" class="HttpMethodNONGET">
+            <a rel="operation" href="GetPossibleOutputsForWavelength.html">POST</a>
+          </td>
+          <td class="description">Gets all possible ways to set specific wavelength.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/SetWavelength</td>
+          <td title="/Optical/WavelengthControl/SetWavelength" class="HttpMethodNONGET">
+            <a rel="operation" href="SetWavelength.html">PUT</a>
+          </td>
+          <td class="description">Sets new wavelength. Interaction string will be used to select which interaction to use.
+        It might be simple interaction string (SH-SIG) or expandable (#-SIG). Use * to match use all interactions.</td>
+        </tr>
+        <tr>
+          <td class="Uri">/SetWavelengthUsingAnyInteraction</td>
+          <td title="/Optical/WavelengthControl/SetWavelengthUsingAnyInteraction" class="HttpMethodNONGET">
+            <a rel="operation" href="SetWavelengthUsingAnyInteraction.html">PUT</a>
+          </td>
+          <td class="description">Sets new wavelength. Any of the possible interactions that support this wavelength will be used. If you need extra options use method SetWavelength.</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

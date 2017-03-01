@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Reference for  /Optical/WavelengthControl/Output</title>
+    
+  <link rel="stylesheet" type="text/css" href="style.css"></head>
+  <body>
+    <div id="content">
+      <p class="heading1">Reference for  /Optical/WavelengthControl/Output</p>
+      <p class="description">Gets current output information (wavelength, interaction, calculated motor positions and so on).</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">GET</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="response-json">The following is an example response Json body:</a>
+        <pre class="response-json">{
+	"ActualInteraction":"String content",
+	"IdlerWavelength":1.26743233E+15,
+	"Interaction":"String content",
+	"IsForBackgroundMeasurement":true,
+	"IsUserActionCompleted":true,
+	"IsWaitingForUserAction":true,
+	"IsWavelengthSettingInProgress":true,
+	"IsWavelengthStrict":true,
+	"Messages":[{
+		"Image":"String content",
+		"IsCritical":true,
+		"IsNew":true,
+		"MessengerIndex":2147483647,
+		"SeparationDeviceIndex":2147483647,
+		"Text":"String content"
+	}],
+	"MotorPositions":[{
+		"Key":2147483647,
+		"Value":1.26743233E+15
+	}],
+	"OpticalDeviceOutputs":[{
+		"Key":2147483647,
+		"Value":1.26743233E+15
+	}],
+	"OtherDevicesOutputs":[{
+		"Key":"String content",
+		"Value":1.26743233E+15
+	}],
+	"SignalWavelength":1.26743233E+15,
+	"Wavelength":1.26743233E+15,
+	"WavelengthSettingCompletionPart":1.26743233E+15
+}</pre>
+      </p>
+      
+      
+      
+      
+    </div>
+  </body>
+</html>
