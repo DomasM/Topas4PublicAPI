@@ -47,7 +47,6 @@ Coverage/
 .svn
 
 *.docx
-*.png
 *.opj
 *lastPostBuild.txt
 # Office Temp Files
