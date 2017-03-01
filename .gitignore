@@ -54,3 +54,6 @@ Coverage/
 .vs/
 
 __pycache__/
+
+!/NET_SDK/Topas4Lib.dll
+#don't ignore sdk dll
