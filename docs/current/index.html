@@ -41,6 +41,14 @@
             </ol>
             <h3>.NET SDK</h3>
             <p>While all functionality of the device is exposed via REST APIs, managed .NET library is provided. While it’s only the thin wrapper over REST API, in most cases using it should be easier and faster way to achieve the desired functionality. In case programming language/environment of your choice does not allow to use managed dynamic link libraries, you can use REST API without any loss of functionality.</p>
+            <h3>Detailed description of all sub-services</h3>
+            <ul>
+                <li><strong><a href="Services/Optical/WavelengthControl/ServiceHelp.html">Wavelength control</a></strong></li>
+                <li><strong><a href="Services/ShutterInterlock/ServiceHelp.html">Shutter and interlock</a></strong></li>
+                <li><strong><a href="Services/Motors/ServiceHelp.html">Motors</a></strong></li>
+                <li><strong><a href="Services/Authentication/ServiceHelp.html">Authentication</a></strong></li>
+                <li><strong><a href="Services/SmoothWavelengthSetter/ServiceHelp.html">Smooth wavelength setter</a></strong></li>
+            </ul>
             <h3>Examples</h3>
             <p>To get started quickly please see provided examples for these languages/tools (download link is on the top of the page):</p>
             <ul>
@@ -67,11 +75,9 @@
             <ul>
                 <li>Interlock can’t be activated</li>
                 <li>By default, access is granted for all callers to change systems state</li>
-                <li>
-                    SmoothWavelengthSetter will abort any movement very quickly, as demo motors move with infinite acceleration
-                    When running all examples (except Postman) make sure to provide correct serial number of your own device. Place to do so is clearly marked in code, e.g
-                </li>
+                <li>SmoothWavelengthSetter will abort any movement very quickly, as demo motors move with infinite acceleration</li>
             </ul>
+            <p>When running all examples (except Postman) make sure to provide correct serial number of your own device. Place to do so is clearly marked in code, e.g</p>
 <pre><code>static void Main (string[] args) {
             var serialNumber = "00666"; //change to actual serial number of your own device.
             var example = new Topas4SDKExample (serialNumber);
@@ -82,14 +88,6 @@
                 If you want to use Postman collection correct environment variable “url” must be set.  It should look like <a href="http://127.0.0.1:8000/00666/v0/PublicAPI">http://127.0.0.1:8000/00666/v0/PublicAPI</a>, where 00666 is replaced with serial number of your device, and correct IP address and port is supplied too.
                 <a href="https://app.getpostman.com/run-collection/49bfe46363f8f9e4a6d3"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman" /></a>
             </p>
-            <h3>Detailed description of all sub-services</h3>
-            <ul>
-                <li><strong><a href="Services/Optical/WavelengthControl/ServiceHelp.html">Wavelength control</a></strong></li>
-                <li><strong><a href="Services/ShutterInterlock/ServiceHelp.html">Shutter and interlock</a></strong></li>
-                <li><strong><a href="Services/Motors/ServiceHelp.html">Motors</a></strong></li>
-                <li><strong><a href="Services/Authentication/ServiceHelp.html">Authentication</a></strong></li>
-                <li><strong><a href="Services/SmoothWavelengthSetter/ServiceHelp.html">Smooth wavelength setter</a></strong></li>
-            </ul>
             <h3>Migrating from WinTopas3</h3>
             <p>
                 WinTopas3 API provided two different ways to control device. Some of the functions can be accessed via TCP/IP or COM port, with WinTopas3 application listening for incoming commands.
@@ -173,6 +171,8 @@
                 </tbody>
             </table>
         </div>
+
+
         <!--end of markdown-->
 
         </div>
