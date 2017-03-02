@@ -10,7 +10,7 @@ body {margin: 0;}
     }
 
    .topOfPageHeader {
-            background-color: #6699cc;
+            background-color: #264c80;
             color: #ffffff;
             font-family: Consolas;
             font-size: 26px;
@@ -36,16 +36,17 @@ body {margin: 0;}
       box-sizing: border-box;
     }
 
-    #out{
-		margin-left: 30px;
-      overflow: auto;
-      padding: 10px;
-      padding-left: 20px;
-      color: #444;
-      font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
-      font-size: 16px;
-      line-height: 1.5em
-    }
+#out {
+    width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 10px;
+    padding-left: 20px;
+    color: #444;
+    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.5em
+}
 
     #menu {
       display: none;
@@ -145,7 +146,7 @@ body {margin: 0;}
 
     img{max-width:100%;}
 
-    h1,h2,h3,h4,h5,h6{font-weight:normal;color:#111;line-height:1em;}
+    h1,h2,h3,h4,h5,h6{font-weight:normal;color:#111;line-height:1em; margin:0 auto;}
     h4,h5,h6{ font-weight: bold; }
     h1{ font-size:2.5em; }
     h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
@@ -153,6 +154,10 @@ body {margin: 0;}
     h4{ font-size:1.5em; }
     h5{ font-size:1em; }
     h6{ font-size:0.9em; }
+h3 {
+    padding:5px;
+    background-color: #acc8ef;
+}
 
     blockquote{color:#666666;margin:0;padding-left: 3em;border-left: 0.5em #EEE solid;}
     hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }

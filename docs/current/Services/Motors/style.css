@@ -20,14 +20,14 @@ BODY {
             }
 
            .example  {
-                color: #6699cc;
+                color: #264c80;
                 font-family: Consolas;
                 font-size: 18px;
                 font-weight: normal;
             }
 
             .HttpMethod  {
-                color: #6699cc;
+                color: #264c80;
                 font-family: Consolas;
                 font-size: 18px;
                 font-weight: normal;
@@ -43,7 +43,7 @@ BODY {
 			
 
             .heading1 {
-                background-color: #6699cc;
+                background-color: #264c80;
                 color: #ffffff;
                 font-family: Consolas;
                 font-size: 26px;
@@ -55,7 +55,7 @@ BODY {
             }
 			
 			.example  {
-                color: #6699cc;
+                color: #264c80;
                 font-family: Consolas;
                 font-size: 18px;
                 font-weight: normal;
@@ -74,7 +74,7 @@ BODY {
 			    padding-right: 40px;
 				padding-top: 2px;
 				padding-bottom: 2px;
-                color: #6699cc;
+                color: #264c80;
                 font-size: 16px;
                 font-weight: normal;
             }
@@ -114,26 +114,26 @@ BODY {
                 border-collapse: collapse;
                 border-spacing: 0px;
            
-				border-top: 3px #6699cc solid;
-			 border-left: 3px #6699cc solid;
-               border-right: 3px #6699cc solid;
-                border-bottom: 3px #6699cc solid;
+				border-top: 3px #264c80 solid;
+			 border-left: 3px #264c80 solid;
+               border-right: 3px #264c80 solid;
+                border-bottom: 3px #264c80 solid;
             }
 
             table th {
 			 
-                border-top: 3px #6699cc solid;
-			 border-left: 3px #6699cc solid;
-               border-right: 3px #6699cc solid;
-                border-bottom: 3px #6699cc solid;
+                border-top: 3px #264c80 solid;
+			 border-left: 3px #264c80 solid;
+               border-right: 3px #264c80 solid;
+                border-bottom: 3px #264c80 solid;
                 background-color:white;
             }
 
             table td {
 			   
-				border-top: 3px #6699cc solid;
-			 border-left: 3px #6699cc solid;
-               border-right: 3px #6699cc solid;
-                border-bottom: 3px #6699cc solid;
+				border-top: 3px #264c80 solid;
+			 border-left: 3px #264c80 solid;
+               border-right: 3px #264c80 solid;
+                border-bottom: 3px #264c80 solid;
          
                 background-color:white;
