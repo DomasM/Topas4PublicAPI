@@ -3,183 +3,163 @@
 <head>
     <title>Topas4 Public API Main page</title>
     <link rel="stylesheet" type="text/css" href="assets\IndexStyle.css" />
-    <style>
-               
-
-        
-      
-    </style>
 </head>
 <body>
     <div id="content">
-        <div class="topOfPageHeader">Topas4 Public API main help page (under construction)
+        <div class="topOfPageHeader">
+            Topas4 Public API main help page (under construction)
 
-   
-		</div>
+
+        </div>
         <div id="out">
-    
-        <a  href="http://www.lightcon.com">
-            <img src="assets/images/LC-logo.png" alt="Light Convestion logo" style="width: 200px" />
-        </a>
+
+            <a href="http://www.lightcon.com">
+                <img src="assets/images/LC-logo.png" alt="Light Convestion logo" style="width: 200px" />
+            </a>
 
 
-        <!--from markdown below-->
-        <!--used this page before build is in order https://jbt.github.io/markdown-editor/   -->
-
-            <p>
-                <a href="https://github.com/DomasM/Topas4PublicAPI/archive/master.zip"><strong>Click here to download SDK as zip file</strong></a>
-                (Includes examples, .NET library, and documentation for off-line reference).
-            </p>
-            <p><a href="https://www.dropbox.com/s/54ccgxua9gch6mt/WinTopas4-setup.exe?dl=1">Click here to download WinTopas4 application installer.</a></p>
-            <p><strong>Topas4Server version 0.7.0.0 or later required.</strong></p>
-            <h3>Principal concepts</h3>
-            <p>Topas4 software system consists of server application and client applications. For each physical device there will be only one server application and it must be running all the time. All client applications can control the device by using REST API, which is implemented by server application. Server application and all client applications provided by Light Conversion (WinTopas4, PowerScanner-T4, spectraLight and others) are written in a way to allow multiple clients to use the same device at the same time. Below are listed key concepts of Topas4 API.</p>
-            <ol>
-                <li>Topas4 Server application must be running all the time to access the device.</li>
-                <li>Other Topas4 client applications (e.g. WinTopas4) might be running at the same time as the custom client application written by the API user, but that is not required.</li>
-                <li>Server and client applications might be running on the same PC, or on different PCs. Operating system or even lack of it isn't significant for client applications.</li>
-                <li>The only way to control the device is via REST API, using JSON as data serialization format.</li>
-                <li>All the actions/operations are non-blocking: command to move motor or set target wavelength will return immediately, not waiting for physical action to complete. To know when and whether action has completed, use other API calls.</li>
-                <li>There is no concept of connecting to/disconnecting from a device or a session.</li>
-                <li>API calls that change systems state (e.g. “move motor”, but not “get motor position”) must come from PC with authorized IP address to increase safety.</li>
-                <li>Topas4 Server applications location uses UDP multicast (.NET SDK includes location function, example in Python is provided too).</li>
-            </ol>
-            <h3>.NET SDK</h3>
-            <p>While all functionality of the device is exposed via REST APIs, managed .NET library is provided. While it’s only the thin wrapper over REST API, in most cases using it should be easier and faster way to achieve the desired functionality. In case programming language/environment of your choice does not allow to use managed dynamic link libraries, you can use REST API without any loss of functionality.</p>
-            <h3>Detailed description of all sub-services</h3>
-            <ul>
-                <li><strong><a href="Services/Optical/WavelengthControl/ServiceHelp.html">Wavelength control</a></strong></li>
-                <li><strong><a href="Services/ShutterInterlock/ServiceHelp.html">Shutter and interlock</a></strong></li>
-                <li><strong><a href="Services/Motors/ServiceHelp.html">Motors</a></strong></li>
-                <li><strong><a href="Services/Authentication/ServiceHelp.html">Authentication</a></strong></li>
-                <li><strong><a href="Services/SmoothWavelengthSetter/ServiceHelp.html">Smooth wavelength setter</a></strong></li>
-            </ul>
-            <h3>Examples</h3>
-            <p>To get started quickly please see provided examples for these languages/tools (download link is on the top of the page):</p>
-            <ul>
-                <li>C# (.NET SDK)</li>
-                <li>Python (both .NET SDK and raw REST API examples are provided)</li>
-                <li>Visual Basic (.NET SDK)</li>
-                <li>LabVIEW (.NET SDK)</li>
-                <li>Postman (Collection)</li>
-            </ul>
-            <p>These operations are included in examples:</p>
-            <ul>
-                <li>Locate devices</li>
-                <li>Open/close shutter</li>
-                <li>Get current shutter state</li>
-                <li>Get all available interactions with their wavelength ranges</li>
-                <li>Set wavelength using specific interaction</li>
-                <li>Inform user about actions he has to perform after setting wavelength (if any)</li>
-                <li>Tweak position of single motor</li>
-            </ul>
-            <p>
-                <strong>Additionally, you don’t need a real physical device to start using API.</strong> In WinTopas4 application click Tools&gt;Launch Demo Device and select one of the demo devices.
-                You can use this demo device just as the real physical device. Known limitations:
-            </p>
-            <ul>
-                <li>Interlock can’t be activated</li>
-                <li>By default, access is granted for all callers to change systems state</li>
-                <li>SmoothWavelengthSetter will abort any movement very quickly, as demo motors move with infinite acceleration</li>
-            </ul>
-            <p>When running all examples (except Postman) make sure to provide correct serial number of your own device. Place to do so is clearly marked in code, e.g</p>
+            <p><a href="https://github.com/DomasM/Topas4PublicAPI/archive/master.zip"><strong>Click here to download SDK as zip file</strong></a>
+(Includes examples, .NET library, and documentation for off-line reference).</p>
+<p><a href="https://www.dropbox.com/s/54ccgxua9gch6mt/WinTopas4-setup.exe?dl=1">Click here to download WinTopas4 application installer.</a></p>
+<p><strong>Topas4Server version 0.7.0.0 or later required.</strong></p>
+<h3 id="principal-concepts">Principal concepts</h3>
+<p>Topas4 software system consists of server application and client applications. For each physical device there will be only one server application and it must be running all the time. All client applications can control the device by using REST API, which is implemented by server application. Server application and all client applications provided by Light Conversion (WinTopas4, PowerScanner-T4, spectraLight and others) are written in a way to allow multiple clients to use the same device at the same time. Below are listed key concepts of Topas4 API.</p>
+<ol>
+<li>Topas4 Server application must be running all the time to access the device.</li>
+<li>Other Topas4 client applications (e.g. WinTopas4) might be running at the same time as the custom client application written by the API user, but that is not required.</li>
+<li>Server and client applications might be running on the same PC, or on different PCs. Operating system or even lack of it isn't significant for client applications.</li>
+<li>The only way to control the device is via REST API, using JSON as data serialization format.</li>
+<li>All the actions/operations are non-blocking: command to move motor or set target wavelength will return immediately, not waiting for physical action to complete. To know when and whether action has completed, use other API calls.</li>
+<li>There is no concept of connecting to/disconnecting from a device or a session.</li>
+<li>API calls that change systems state (e.g. “move motor”, but not “get motor position”) must come from PC with authorized IP address to increase safety.</li>
+<li>Topas4 Server applications location uses UDP multicast (.NET SDK includes location function, example in Python is provided too).</li>
+</ol>
+<h3 id="net-sdk">.NET SDK</h3>
+<p>While all functionality of the device is exposed via REST APIs, managed .NET library is provided. While it’s only the thin wrapper over REST API, in most cases using it should be easier and faster way to achieve the desired functionality. In case programming language/environment of your choice does not allow to use managed dynamic link libraries, you can use REST API without any loss of functionality.</p>
+<h3 id="detailed-description-of-all-sub-services">Detailed description of all sub-services</h3>
+<ul>
+<li><strong><a href="Services/Optical_WavelengthControl/ServiceHelp.html">Wavelength control</a></strong></li>
+<li><strong><a href="Services/ShutterInterlock/ServiceHelp.html">Shutter and interlock</a></strong></li>
+<li><strong><a href="Services/Motors/ServiceHelp.html">Motors</a></strong></li>
+<li><strong><a href="Services/Authentication/ServiceHelp.html">Authentication</a></strong></li>
+<li><strong><a href="Services/SmoothWavelengthSetter/ServiceHelp.html">Smooth wavelength setter</a></strong></li>
+</ul>
+<h3 id="examples">Examples</h3>
+<p>To get started quickly please see provided examples for these languages/tools (download link is on the top of the page):</p>
+<ul>
+<li>C# (.NET SDK)</li>
+<li>Python (both .NET SDK and raw REST API examples are provided)</li>
+<li>Visual Basic (.NET SDK)</li>
+<li>LabVIEW (.NET SDK)</li>
+<li>Postman (Collection)</li>
+</ul>
+<p>These operations are included in examples:</p>
+<ul>
+<li>Locate devices</li>
+<li>Open/close shutter</li>
+<li>Get current shutter state</li>
+<li>Get all available interactions with their wavelength ranges</li>
+<li>Set wavelength using specific interaction</li>
+<li>Inform user about actions he has to perform after setting wavelength (if any)</li>
+<li>Tweak position of single motor</li>
+</ul>
+<p><strong>Additionally, you don’t need a real physical device to start using API.</strong> In WinTopas4 application click Tools&gt;Launch Demo Device and select one of the demo devices.
+You can use this demo device just as the real physical device. Known limitations:</p>
+<ul>
+<li>Interlock can’t be activated</li>
+<li>By default, access is granted for all callers to change systems state</li>
+<li>SmoothWavelengthSetter will abort any movement very quickly, as demo motors move with infinite acceleration</li>
+</ul>
+<p>When running all examples (except Postman) make sure to provide correct serial number of your own device. Place to do so is clearly marked in code, e.g</p>
 <pre><code>static void Main (string[] args) {
-            var serialNumber = "00666"; //change to actual serial number of your own device.
+            var serialNumber = &quot;00666&quot;; //change to actual serial number of your own device.
             var example = new Topas4SDKExample (serialNumber);
             example.Run ();
         }
 </code></pre>
-            <p>
-                If you want to use Postman collection correct environment variable “url” must be set.  It should look like <a href="http://127.0.0.1:8000/00666/v0/PublicAPI">http://127.0.0.1:8000/00666/v0/PublicAPI</a>, where 00666 is replaced with serial number of your device, and correct IP address and port is supplied too.
-                <a href="https://app.getpostman.com/run-collection/49bfe46363f8f9e4a6d3"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman" /></a>
-            </p>
-            <h3>Migrating from WinTopas3</h3>
-            <p>
-                WinTopas3 API provided two different ways to control device. Some of the functions can be accessed via TCP/IP or COM port, with WinTopas3 application listening for incoming commands.
-                Another way to control device is using unmanaged dynamic link library TopasAPI.dll.
-                In this case WinTopas3 application cannot be running at the same time and all the required functionality must be implemented by the user.
-                In contrast to this Topas4 system provides only one way to access and control device. <strong>There is no backward compatibility between WinTopas3 APIs and Topas4 API.</strong>
-                Please read section <strong>Principal Concepts</strong> to understand key concepts of Topas4 API, as they are quite different compared to both of the WinTopas3 APIs.
-            </p>
-            <h3>Advanced functionality</h3>
-            <h5>Smooth wavelength scanner</h5>
-            <p>
-                Smooth wavelength scanner allows to scan wavelength continuously without losing output with high speed by adjusting motors speeds and accelerations on the fly.
-                This functionality is included in Public API.
-                However, please notice, that it’s currently most complicated feature in Topas4 and is harder to use, less reliable and less stable than rest of the API.
-                Here are recommended parameters values for the main method MoveFromAToB and their descriptions.
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th style="text-align:center">Parameter</th>
-                        <th style="text-align:center">Explanation</th>
-                        <th style="text-align:center">Recommended default value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="text-align:center">MaxMotorPositionError</td>
-                        <td style="text-align:center">Max allowable motor position error on segment end in speed/acceleration calculations in steps.</td>
-                        <td style="text-align:center">16</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center">StartWavelength</td>
-                        <td style="text-align:center">Starting wavelength from which the scan will be performed.</td>
-                        <td style="text-align:center"></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center">EndWavelength</td>
-                        <td style="text-align:center">Pair for StartWavelength.</td>
-                        <td style="text-align:center"></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center">Repeats</td>
-                        <td style="text-align:center">Value of 1 means to move from StartWavelength to EndWavelength and stop there, 2 – move to EndWavelength and back again, and so on.</td>
-                        <td style="text-align:center"></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center">Interaction</td>
-                        <td style="text-align:center">Interaction that will be used (same usage as when setting wavelength). Multi-interaction scan is currently not implemented.</td>
-                        <td style="text-align:center"></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center">CustomWavelengthStepSize</td>
-                        <td style="text-align:center">Step size in nanometers used for calibration curve segmentation. In general, use bigger step size for longer wavelengths and faster speeds.</td>
-                        <td style="text-align:center">0 (auto select by algorithm)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center">IgnoreSeparationConfiguration</td>
-                        <td style="text-align:center">If true, motors that should be moved because of separation calibration will be ignored.</td>
-                        <td style="text-align:center">false</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center">NanometersPerSeconds</td>
-                        <td style="text-align:center">Speed of scan. Speed will be slower on range ends, where motors have to accelerate from standing position or stop. Parameter <strong>MaxSpeedError allows</strong> to have non-constant movement speed.</td>
-                        <td style="text-align:center">&lt;=Max possible speed</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center">MaxSpeedError</td>
-                        <td style="text-align:center">Value of x means that any segment can have slower/faster speed, as long as duration difference is smaller than x*DurationWithOptimalSpeed, where DurationWithOptimalSpeed=WavelengthStepSize/ NanometersPerSeconds.  If you application requires constant scan speed, use small positive value, otherwise you might be able to reach higher speeds with large value.</td>
-                        <td style="text-align:center">0.1 or 20 if constant speed</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center">CollectMotorPositionsDebugInfo</td>
-                        <td style="text-align:center">Actual motor positions will be collected during scan with high frequency. At the end of each repeat file containing actual and ideal positions for all motors will be written to folder \Temporary\SmoothSetterDebug (relative to server executable). Data can viewed with WinTopas4 Smooth Scanner tool (MISC tab) by dragging file on graph to check whether scan is sufficiently accurate.</td>
-                        <td style="text-align:center"></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center">SelectMaxSpeedFastOnServerSide</td>
-                        <td style="text-align:center">Select max possible speed on server side. Shortened binary search is used, so selected speed might be up to 25% slower than fastest possible. Behavior likely to change in future versions.</td>
-                        <td style="text-align:center">false</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<p>If you want to use Postman collection correct environment variable “url” must be set.  It should look like <a href="http://127.0.0.1:8000/00666/v0/PublicAPI,">http://127.0.0.1:8000/00666/v0/PublicAPI,</a> where 00666 is replaced with serial number of your device, and correct IP address and port is supplied too.
+<a href="https://app.getpostman.com/run-collection/49bfe46363f8f9e4a6d3"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman" /></a></p>
+<h3 id="migrating-from-wintopas3">Migrating from WinTopas3</h3>
+<p>WinTopas3 API provided two different ways to control device. Some of the functions can be accessed via TCP/IP or COM port, with WinTopas3 application listening for incoming commands.
+Another way to control device is using unmanaged dynamic link library TopasAPI.dll.
+In this case WinTopas3 application cannot be running at the same time and all the required functionality must be implemented by the user.
+In contrast to this Topas4 system provides only one way to access and control device. <strong>There is no backward compatibility between WinTopas3 APIs and Topas4 API.</strong>
+Please read section <strong>Principal Concepts</strong> to understand key concepts of Topas4 API, as they are quite different compared to both of the WinTopas3 APIs.</p>
+<h3 id="advanced-functionality">Advanced functionality</h3>
+<h5 id="smooth-wavelength-scanner">Smooth wavelength scanner</h5>
+<p>Smooth wavelength scanner allows to scan wavelength continuously without losing output with high speed by adjusting motors speeds and accelerations on the fly.
+This functionality is included in Public API.
+However, please notice, that it’s currently most complicated feature in Topas4 and is harder to use, less reliable and less stable than rest of the API.
+Here are recommended parameters values for the main method MoveFromAToB and their descriptions.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Explanation</th>
+<th style="text-align: center;">Recommended default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">MaxMotorPositionError</td>
+<td style="text-align: center;">Max allowable motor position error on segment end in speed/acceleration calculations in steps.</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr>
+<td style="text-align: center;">StartWavelength</td>
+<td style="text-align: center;">Starting wavelength from which the scan will be performed.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">EndWavelength</td>
+<td style="text-align: center;">Pair for StartWavelength.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Repeats</td>
+<td style="text-align: center;">Value of 1 means to move from StartWavelength to EndWavelength and stop there, 2 – move to EndWavelength and back again, and so on.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Interaction</td>
+<td style="text-align: center;">Interaction that will be used (same usage as when setting wavelength). Multi-interaction scan is currently not implemented.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">CustomWavelengthStepSize</td>
+<td style="text-align: center;">Step size in nanometers used for calibration curve segmentation. In general, use bigger step size for longer wavelengths and faster speeds.</td>
+<td style="text-align: center;">0 (auto select by algorithm)</td>
+</tr>
+<tr>
+<td style="text-align: center;">IgnoreSeparationConfiguration</td>
+<td style="text-align: center;">If true, motors that should be moved because of separation calibration will be ignored.</td>
+<td style="text-align: center;">false</td>
+</tr>
+<tr>
+<td style="text-align: center;">NanometersPerSeconds</td>
+<td style="text-align: center;">Speed of scan. Speed will be slower on range ends, where motors have to accelerate from standing position or stop. Parameter <strong>MaxSpeedError allows</strong> to have non-constant movement speed.</td>
+<td style="text-align: center;">&lt;=Max possible speed</td>
+</tr>
+<tr>
+<td style="text-align: center;">MaxSpeedError</td>
+<td style="text-align: center;">Value of x means that any segment can have slower/faster speed, as long as duration difference is smaller than x*DurationWithOptimalSpeed, where DurationWithOptimalSpeed=WavelengthStepSize/ NanometersPerSeconds.  If you application requires constant scan speed, use small positive value, otherwise you might be able to reach higher speeds with large value.</td>
+<td style="text-align: center;">0.1 or 20 if constant speed</td>
+</tr>
+<tr>
+<td style="text-align: center;">CollectMotorPositionsDebugInfo</td>
+<td style="text-align: center;">Actual motor positions will be collected during scan with high frequency. At the end of each repeat file containing actual and ideal positions for all motors will be written to folder \Temporary\SmoothSetterDebug (relative to server executable). Data can viewed with WinTopas4 Smooth Scanner tool (MISC tab) by dragging file on graph to check whether scan is sufficiently accurate.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SelectMaxSpeedFastOnServerSide</td>
+<td style="text-align: center;">Select max possible speed on server side. Shortened binary search is used, so selected speed might be up to 25% slower than fastest possible. Behavior likely to change in future versions.</td>
+<td style="text-align: center;">false</td>
+</tr>
+</tbody>
+</table>
 
-
-        <!--end of markdown-->
 
         </div>
+    </div>
 </body>
 </html>
