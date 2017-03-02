@@ -1,13 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Reference for  /Optical/WavelengthControl/SetWavelengthUsingAnyInteraction</title>
+    <title>Reference for  /Optical/WavelengthControl/SetWavelength</title>
     
-  <link rel="stylesheet" type="text/css" href="style.css"></head>
+  <link rel="stylesheet" type="text/css" href="..\..\assets\style.css"></head>
   <body>
     <div id="content">
-      <p class="heading1">Reference for  /Optical/WavelengthControl/SetWavelengthUsingAnyInteraction</p>
-      <p class="description">Sets new wavelength. Any of the possible interactions that support this wavelength will be used. If you need extra options use method SetWavelength.</p>
+      <p class="heading1">Reference for  /Optical/WavelengthControl/SetWavelength</p>
+      <p class="description">Sets new wavelength. Interaction string will be used to select which interaction to use.
+        It might be simple interaction string (SH-SIG) or expandable (#-SIG). Use * to match use all interactions.</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -17,7 +18,17 @@
       
       <p>
         <a class="example" name="request-json">The following is an example request Json body:</a>
-        <pre class="request-json">1.26743233E+15</pre>
+        <pre class="request-json">{
+	"DontTouchShutterOnInteractionChange":true,
+	"IgnoreSeparation":true,
+	"SetForBackground":true,
+	"Wavelength":1.26743233E+15,
+	"Interaction":"String content",
+	"Priorities":[{
+		"Priority":2147483647,
+		"Type":"String content"
+	}]
+}</pre>
       </p>
       
       <p>
@@ -67,6 +78,10 @@
 	"SignalWavelength":1.26743233E+15
 }</pre>
       </p>
+      
+      
+      
+      
       
       
       
