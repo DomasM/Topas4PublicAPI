@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Operations at /Motors</title>
+
+    <link rel="stylesheet" type="text/css" href="..\assets\CommonStyle.css">
+
+</head>
+<body>
+    <div id="content">
+
+        <div id="container" style="width:100%;">
+
+            <div id="MainMethodsMenu" class="MainMethodsMenu">
+
+            <div class="MainMethodsMenuItem"><a href="#GetAuthenticationStatus"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">AuthenticationStatus</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetCallerHasAccess"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">CallerHasAccess</div></div>
+<div class="MainMethodsMenuItem"><a href="#StartAuthenticationByInterlock"><span class="badge badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">StartAuthenticationByInterlock</div></div>
+<div class="MainMethodsMenuItem"><a href="#StartAuthenticationByInterlockWithIP"><span class="badge badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">StartAuthenticationByInterlockExplicitIP</div></div>
+<div class="MainMethodsMenuItem"><a href="#StartAuthenticationByInterlockWithPCName"><span class="badge badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">StartAuthenticationByInterlockExplicitPCName</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetUsersWithAccessRights"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">UsersWithAccessRights</div></div>
+</div>
+
+            <div id="MethodsSubPage" class="MethodsSubPage"><!–– start method ––>
+<div id="content"><a id="GetAuthenticationStatus"></a>
+      <p class="heading1 badge_get">  /Authentication/AuthenticationStatus</p>
+      <p class="description">Get status of authentication currently in progress.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">GET</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="response-json">The following is an example response Json body:</a>
+        <pre class="response-json">{
+	"AuthenticationProgressPercent":1.26743233E+15,
+	"CallerHasAccess":true,
+	"IsAuthenticationInProgress":true
+}</pre>
+      </p>
+      
+      
+      
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="GetCallerHasAccess"></a>
+      <p class="heading1 badge_get">  /Authentication/CallerHasAccess</p>
+      <p class="description">Returns true if caller can access all services. If he does not, call /StartAuthenticationByInterlock and repeatedly press interlock to grant access.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">GET</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="response-json">The following is an example response Json body:</a>
+        <pre class="response-json">true</pre>
+      </p>
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="StartAuthenticationByInterlock"></a>
+      <p class="heading1 badge_post">  /Authentication/StartAuthenticationByInterlock</p>
+      <p class="description">Start authentication. User has to repeatedly press interlock button to authenticate device. PC name will be used to identify user with fallback to IP address.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">POST</span>
+      </p>
+      
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="StartAuthenticationByInterlockWithIP"></a>
+      <p class="heading1 badge_post">  /Authentication/StartAuthenticationByInterlockExplicitIP</p>
+      <p class="description">Start authentication for specific IP address. User has to repeatedly press interlock button to authenticate device.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">POST</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="request-json">The following is an example request Json body:</a>
+        <pre class="request-json">"String content"</pre>
+      </p>
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="StartAuthenticationByInterlockWithPCName"></a>
+      <p class="heading1 badge_post">  /Authentication/StartAuthenticationByInterlockExplicitPCName</p>
+      <p class="description">Start authentication for specific PC name. User has to repeatedly press interlock button to authenticate device.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">POST</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="request-json">The following is an example request Json body:</a>
+        <pre class="request-json">"String content"</pre>
+      </p>
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="GetUsersWithAccessRights"></a>
+      <p class="heading1 badge_get">  /Authentication/UsersWithAccessRights</p>
+      <p class="description">Returns list of user with access rights.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">GET</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="response-json">The following is an example response Json body:</a>
+        <pre class="response-json">[{
+	"IPAddress":"String content",
+	"PCName":"String content"
+}]</pre>
+      </p>
+      
+      
+      
+    </div><!–– end method ––>
+</div>
+
+        </div>  
+
+    </div>
+</body>
+</html>

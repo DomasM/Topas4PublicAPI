@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Operations at /Motors</title>
+
+    <link rel="stylesheet" type="text/css" href="..\assets\CommonStyle.css">
+
+</head>
+<body>
+    <div id="content">
+
+        <div id="container" style="width:100%;">
+
+            <div id="MainMethodsMenu" class="MainMethodsMenu">
+
+            <div class="MainMethodsMenuItem"><a href="#GetActualPosition"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">ActualPosition</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetActualPositionInUnits"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">ActualPositionInUnits</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetAllProperties"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">AllProperties</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetPropertiesThatChangeOften"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">PropertiesThatChangeOften</div></div>
+<div class="MainMethodsMenuItem"><a href="#StopMotor"><span class="badge badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">Stop</div></div>
+<div class="MainMethodsMenuItem"><a href="#StopAllMotors"><span class="badge badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">StopAll</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetTargetPosition"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">TargetPosition</div></div><div class="MainMethodsMenuItem"><a href="#SetTargetPosition"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">TargetPosition</div></div>
+<div class="MainMethodsMenuItem"><a href="#SetTargetPositionInSuperUnits"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">TargetPositionInSuperUnits</div></div>
+<div class="MainMethodsMenuItem"><a href="#SetTargetPositionInUnits"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">TargetPositionInUnits</div></div>
+<div class="MainMethodsMenuItem"><a href="#SetTargetPositionRelative"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">TargetPositionRelative</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetMotor"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">id={motorIndex}</div></div>
+</div>
+
+            <div id="MethodsSubPage" class="MethodsSubPage"><!–– start method ––>
+<div id="content"><a id="GetActualPosition"></a>
+      <p class="heading1 badge_get">  /Motors/ActualPosition?id={MOTORINDEX}</p>
+      <p class="description">Gets actual position of motor in steps. Position is synced with hardware asynchronously.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">GET</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="response-json">The following is an example response Json body:</a>
+        <pre class="response-json">2147483647</pre>
+      </p>
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="GetActualPositionInUnits"></a>
+      <p class="heading1 badge_get">  /Motors/ActualPositionInUnits?id={MOTORINDEX}</p>
+      <p class="description">Gets actual position of motor in units (typically mm or deg). Position is synced with hardware asynchronously.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">GET</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="response-json">The following is an example response Json body:</a>
+        <pre class="response-json">1.26743233E+15</pre>
+      </p>
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="GetAllProperties"></a>
+      <p class="heading1 badge_get">  /Motors/AllProperties</p>
+      <p class="description">Gets all properties of all motors.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">GET</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="response-json">The following is an example response Json body:</a>
+        <pre class="response-json">{
+	"Motors":[{
+		"Acceleration":2147483647,
+		"ActualPosition":2147483647,
+		"ActualPositionInSuperUnits":1.26743233E+15,
+		"ActualPositionInUnits":1.26743233E+15,
+		"Affix":1.26743233E+15,
+		"Current":2147483647,
+		"Factor":1.26743233E+15,
+		"ForbiddenRanges":[{
+			"From":1.26743233E+15,
+			"IsEnabled":true,
+			"To":1.26743233E+15
+		}],
+		"Index":2147483647,
+		"IsHoming":true,
+		"IsLeftSwitchPressed":true,
+		"IsRightSwitchPressed":true,
+		"MaximalPosition":2147483647,
+		"MaximalPositionInUnits":1.26743233E+15,
+		"MaximalVelocity":2147483647,
+		"MinimalVelocity":2147483647,
+		"NamedPositions":[{
+			"Name":"String content",
+			"Position":2147483647,
+			"ShortName":"String content"
+		}],
+		"PulseDivision":2147483647,
+		"RampDivision":2147483647,
+		"StepDivision":2147483647,
+		"SuperUnitsCalculator":{
+			"Expression":"String content",
+			"ParserType":0,
+			"UnitName":"String content",
+			"ValidUnitsRange":{
+				"From":1.26743233E+15,
+				"To":1.26743233E+15
+			}
+		},
+		"TargetPosition":2147483647,
+		"TargetPositionInSuperUnits":1.26743233E+15,
+		"TargetPositionInUnits":1.26743233E+15,
+		"Title":"String content",
+		"UnitName":"String content",
+		"ZeroOffset":2147483647
+	}]
+}</pre>
+      </p>
+      
+      
+      
+      
+      
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="GetPropertiesThatChangeOften"></a>
+      <p class="heading1 badge_get">  /Motors/PropertiesThatChangeOften</p>
+      <p class="description">Gets often-changing properties properties of all motors.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">GET</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="response-json">The following is an example response Json body:</a>
+        <pre class="response-json">[{
+	"ActualPosition":2147483647,
+	"ActualPositionInSuperUnits":1.26743233E+15,
+	"ActualPositionInUnits":1.26743233E+15,
+	"Index":2147483647,
+	"IsHoming":true,
+	"IsLeftSwitchPressed":true,
+	"IsRightSwitchPressed":true,
+	"TargetPosition":2147483647,
+	"TargetPositionInSuperUnits":1.26743233E+15,
+	"TargetPositionInUnits":1.26743233E+15
+}]</pre>
+      </p>
+      
+      
+      
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="StopMotor"></a>
+      <p class="heading1 badge_post">  /Motors/Stop?id={MOTORINDEX}</p>
+      <p class="description">Stop motor.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">POST</span>
+      </p>
+      
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="StopAllMotors"></a>
+      <p class="heading1 badge_post">  /Motors/StopAll</p>
+      <p class="description">Stop all motors.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">POST</span>
+      </p>
+      
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="GetTargetPosition"></a>
+      <p class="heading1 badge_get">  /Motors/TargetPosition?id={MOTORINDEX}</p>
+      <p class="description">Gets target position of motor in steps.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">GET</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="response-json">The following is an example response Json body:</a>
+        <pre class="response-json">2147483647</pre>
+      </p>
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="SetTargetPosition"></a>
+      <p class="heading1 badge_put">  /Motors/TargetPosition?id={MOTORINDEX}</p>
+      <p class="description">Sets target position in steps and starts moving motor towards it. Invalid positions are silently ignored. See /ActualPosition to know when (and if) motor reaches target position.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">PUT</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="request-json">The following is an example request Json body:</a>
+        <pre class="request-json">2147483647</pre>
+      </p>
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="SetTargetPositionInSuperUnits"></a>
+      <p class="heading1 badge_put">  /Motors/TargetPositionInSuperUnits?id={MOTORINDEX}</p>
+      <p class="description">Sets target position in super units and starts moving motor towards it. Invalid positions are silently ignored. See ActualPositionInSuperUnits to know when (and if) motor reaches target position.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">PUT</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="request-json">The following is an example request Json body:</a>
+        <pre class="request-json">1.26743233E+15</pre>
+      </p>
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="SetTargetPositionInUnits"></a>
+      <p class="heading1 badge_put">  /Motors/TargetPositionInUnits?id={MOTORINDEX}</p>
+      <p class="description">Sets target position in units and starts moving motor towards it. Invalid positions are silently ignored. See ActualPositionInUnits to know when (and if) motor reaches target position.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">PUT</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="request-json">The following is an example request Json body:</a>
+        <pre class="request-json">1.26743233E+15</pre>
+      </p>
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="SetTargetPositionRelative"></a>
+      <p class="heading1 badge_put">  /Motors/TargetPositionRelative?id={MOTORINDEX}</p>
+      <p class="description">Sets target position in steps relative to current target position and starts moving motor towards it. Invalid positions are silently ignored. See /ActualPosition to know when (and if) motor reaches target position.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">PUT</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="request-json">The following is an example request Json body:</a>
+        <pre class="request-json">2147483647</pre>
+      </p>
+    </div><!–– end method ––>
+<!–– start method ––>
+<div id="content"><a id="GetMotor"></a>
+      <p class="heading1 badge_get">  /Motors/?id={MOTORINDEX}</p>
+      <p class="description">Gets all properties of specific motor. If requested motor is not found or is not available due hardware failure error code 404 is returned.</p>
+      
+      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
+        <b>HTTP Method: </b>
+        <span class="method">GET</span>
+      </p>
+      
+      
+      <p>
+        <a class="example" name="response-json">The following is an example response Json body:</a>
+        <pre class="response-json">{
+	"Acceleration":2147483647,
+	"ActualPosition":2147483647,
+	"ActualPositionInSuperUnits":1.26743233E+15,
+	"ActualPositionInUnits":1.26743233E+15,
+	"Affix":1.26743233E+15,
+	"Current":2147483647,
+	"Factor":1.26743233E+15,
+	"ForbiddenRanges":[{
+		"From":1.26743233E+15,
+		"IsEnabled":true,
+		"To":1.26743233E+15
+	}],
+	"Index":2147483647,
+	"IsHoming":true,
+	"IsLeftSwitchPressed":true,
+	"IsRightSwitchPressed":true,
+	"MaximalPosition":2147483647,
+	"MaximalPositionInUnits":1.26743233E+15,
+	"MaximalVelocity":2147483647,
+	"MinimalVelocity":2147483647,
+	"NamedPositions":[{
+		"Name":"String content",
+		"Position":2147483647,
+		"ShortName":"String content"
+	}],
+	"PulseDivision":2147483647,
+	"RampDivision":2147483647,
+	"StepDivision":2147483647,
+	"SuperUnitsCalculator":{
+		"Expression":"String content",
+		"ParserType":0,
+		"UnitName":"String content",
+		"ValidUnitsRange":{
+			"From":1.26743233E+15,
+			"To":1.26743233E+15
+		}
+	},
+	"TargetPosition":2147483647,
+	"TargetPositionInSuperUnits":1.26743233E+15,
+	"TargetPositionInUnits":1.26743233E+15,
+	"Title":"String content",
+	"UnitName":"String content",
+	"ZeroOffset":2147483647
+}</pre>
+      </p>
+      
+      
+      
+      
+      
+    </div><!–– end method ––>
+</div>
+
+        </div>  
+
+    </div>
+</body>
+</html>
