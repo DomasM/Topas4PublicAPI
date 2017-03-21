@@ -6,7 +6,6 @@ body {
 }
 
 
-
 .HttpMethod {
     color: #264c80;
     font-family: Consolas;
@@ -87,7 +86,7 @@ position: fixed;
 	display: inline-block;
 }
 
-.badge {
+.Badge {
     display: inline-block;
     min-width: 10px;
     padding: 3px 7px;
@@ -105,23 +104,23 @@ position: fixed;
     margin-right: 10px;
 }
 
-.badge_get {
+.Badge_get {
     background-color: #264c80;
 }
 
-.badge_post {
+.Badge_post {
     background-color: #6cbd7d;
 }
 
-.badge_put {
+.Badge_put {
     background-color: #22bac4;
 }
 
-.badge_delete {
+.Badge_delete {
     background-color: #d26460;
 }
 
-.badge_patch {
+.Badge_patch {
     background-color: #ccc444;
 }
 

@@ -1,35 +1,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Operations at /Motors</title>
-
-    <link rel="stylesheet" type="text/css" href="..\assets\CommonStyle.css">
-
-</head>
+    <title></title>
+<link rel="stylesheet" type="text/css" href="..\assets\CommonStyle.css"></head>
 <body>
     <div id="content">
 
         <div id="container" style="width:100%;">
 
-            <div id="MainMethodsMenu" class="MainMethodsMenu">
-
-            <div class="MainMethodsMenuItem"><a href="#GetActualPosition"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">ActualPosition</div></div>
-<div class="MainMethodsMenuItem"><a href="#GetActualPositionInUnits"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">ActualPositionInUnits</div></div>
-<div class="MainMethodsMenuItem"><a href="#GetAllProperties"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">AllProperties</div></div>
-<div class="MainMethodsMenuItem"><a href="#GetPropertiesThatChangeOften"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">PropertiesThatChangeOften</div></div>
-<div class="MainMethodsMenuItem"><a href="#StopMotor"><span class="badge badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">Stop</div></div>
-<div class="MainMethodsMenuItem"><a href="#StopAllMotors"><span class="badge badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">StopAll</div></div>
-<div class="MainMethodsMenuItem"><a href="#GetTargetPosition"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">TargetPosition</div></div><div class="MainMethodsMenuItem"><a href="#SetTargetPosition"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">TargetPosition</div></div>
-<div class="MainMethodsMenuItem"><a href="#SetTargetPositionInSuperUnits"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">TargetPositionInSuperUnits</div></div>
-<div class="MainMethodsMenuItem"><a href="#SetTargetPositionInUnits"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">TargetPositionInUnits</div></div>
-<div class="MainMethodsMenuItem"><a href="#SetTargetPositionRelative"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">TargetPositionRelative</div></div>
-<div class="MainMethodsMenuItem"><a href="#GetMotor"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">id={motorIndex}</div></div>
+            <div id="MainMethodsMenu" class="MainMethodsMenu"><div class="MainMethodsMenuItem"><a href="#GetActualPosition"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">ActualPosition</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetActualPositionInUnits"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">ActualPositionInUnits</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetAllProperties"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">AllProperties</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetPropertiesThatChangeOften"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">PropertiesThatChangeOften</div></div>
+<div class="MainMethodsMenuItem"><a href="#StopMotor"><span class="Badge Badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">Stop</div></div>
+<div class="MainMethodsMenuItem"><a href="#StopAllMotors"><span class="Badge Badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">StopAll</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetTargetPosition"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">TargetPosition</div></div><div class="MainMethodsMenuItem"><a href="#SetTargetPosition"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">TargetPosition</div></div>
+<div class="MainMethodsMenuItem"><a href="#SetTargetPositionInSuperUnits"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">TargetPositionInSuperUnits</div></div>
+<div class="MainMethodsMenuItem"><a href="#SetTargetPositionInUnits"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">TargetPositionInUnits</div></div>
+<div class="MainMethodsMenuItem"><a href="#SetTargetPositionRelative"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">TargetPositionRelative</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetMotor"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">id={motorIndex}</div></div>
 </div>
 
             <div id="MethodsSubPage" class="MethodsSubPage"><!–– start method ––>
 <div id="content"><a id="GetActualPosition"></a>
-      <p class="heading1 badge_get">  /Motors/ActualPosition?id={MOTORINDEX}</p>
-      <p class="description">Gets actual position of motor in steps. Position is synced with hardware asynchronously.</p>
+      <p class="heading1 Badge_get">/Motors/ActualPosition?id={MOTORINDEX}</p>
+      <p class="Description"><p>Gets actual position of motor in steps. Position is synced with hardware asynchronously.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -44,8 +40,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="GetActualPositionInUnits"></a>
-      <p class="heading1 badge_get">  /Motors/ActualPositionInUnits?id={MOTORINDEX}</p>
-      <p class="description">Gets actual position of motor in units (typically mm or deg). Position is synced with hardware asynchronously.</p>
+      <p class="heading1 Badge_get">/Motors/ActualPositionInUnits?id={MOTORINDEX}</p>
+      <p class="Description"><p>Gets actual position of motor in units (typically mm or deg). Position is synced with hardware asynchronously.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -60,8 +57,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="GetAllProperties"></a>
-      <p class="heading1 badge_get">  /Motors/AllProperties</p>
-      <p class="description">Gets all properties of all motors.</p>
+      <p class="heading1 Badge_get">/Motors/AllProperties</p>
+      <p class="Description"><p>Gets all properties of all motors.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -127,8 +125,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="GetPropertiesThatChangeOften"></a>
-      <p class="heading1 badge_get">  /Motors/PropertiesThatChangeOften</p>
-      <p class="description">Gets often-changing properties properties of all motors.</p>
+      <p class="heading1 Badge_get">/Motors/PropertiesThatChangeOften</p>
+      <p class="Description"><p>Gets often-changing properties properties of all motors.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -157,8 +156,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="StopMotor"></a>
-      <p class="heading1 badge_post">  /Motors/Stop?id={MOTORINDEX}</p>
-      <p class="description">Stop motor.</p>
+      <p class="heading1 Badge_post">/Motors/Stop?id={MOTORINDEX}</p>
+      <p class="Description"><p>Stop motor.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -168,8 +168,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="StopAllMotors"></a>
-      <p class="heading1 badge_post">  /Motors/StopAll</p>
-      <p class="description">Stop all motors.</p>
+      <p class="heading1 Badge_post">/Motors/StopAll</p>
+      <p class="Description"><p>Stop all motors.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -179,8 +180,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="GetTargetPosition"></a>
-      <p class="heading1 badge_get">  /Motors/TargetPosition?id={MOTORINDEX}</p>
-      <p class="description">Gets target position of motor in steps.</p>
+      <p class="heading1 Badge_get">/Motors/TargetPosition?id={MOTORINDEX}</p>
+      <p class="Description"><p>Gets target position of motor in steps.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -195,8 +197,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="SetTargetPosition"></a>
-      <p class="heading1 badge_put">  /Motors/TargetPosition?id={MOTORINDEX}</p>
-      <p class="description">Sets target position in steps and starts moving motor towards it. Invalid positions are silently ignored. See /ActualPosition to know when (and if) motor reaches target position.</p>
+      <p class="heading1 Badge_put">/Motors/TargetPosition?id={MOTORINDEX}</p>
+      <p class="Description"><p>Sets target position in steps and starts moving motor towards it. Invalid positions are silently ignored. See /ActualPosition to know when (and if) motor reaches target position.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -211,8 +214,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="SetTargetPositionInSuperUnits"></a>
-      <p class="heading1 badge_put">  /Motors/TargetPositionInSuperUnits?id={MOTORINDEX}</p>
-      <p class="description">Sets target position in super units and starts moving motor towards it. Invalid positions are silently ignored. See ActualPositionInSuperUnits to know when (and if) motor reaches target position.</p>
+      <p class="heading1 Badge_put">/Motors/TargetPositionInSuperUnits?id={MOTORINDEX}</p>
+      <p class="Description"><p>Sets target position in super units and starts moving motor towards it. Invalid positions are silently ignored. See ActualPositionInSuperUnits to know when (and if) motor reaches target position.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -227,8 +231,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="SetTargetPositionInUnits"></a>
-      <p class="heading1 badge_put">  /Motors/TargetPositionInUnits?id={MOTORINDEX}</p>
-      <p class="description">Sets target position in units and starts moving motor towards it. Invalid positions are silently ignored. See ActualPositionInUnits to know when (and if) motor reaches target position.</p>
+      <p class="heading1 Badge_put">/Motors/TargetPositionInUnits?id={MOTORINDEX}</p>
+      <p class="Description"><p>Sets target position in units and starts moving motor towards it. Invalid positions are silently ignored. See ActualPositionInUnits to know when (and if) motor reaches target position.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -243,8 +248,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="SetTargetPositionRelative"></a>
-      <p class="heading1 badge_put">  /Motors/TargetPositionRelative?id={MOTORINDEX}</p>
-      <p class="description">Sets target position in steps relative to current target position and starts moving motor towards it. Invalid positions are silently ignored. See /ActualPosition to know when (and if) motor reaches target position.</p>
+      <p class="heading1 Badge_put">/Motors/TargetPositionRelative?id={MOTORINDEX}</p>
+      <p class="Description"><p>Sets target position in steps relative to current target position and starts moving motor towards it. Invalid positions are silently ignored. See /ActualPosition to know when (and if) motor reaches target position.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -259,8 +265,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="GetMotor"></a>
-      <p class="heading1 badge_get">  /Motors/?id={MOTORINDEX}</p>
-      <p class="description">Gets all properties of specific motor. If requested motor is not found or is not available due hardware failure error code 404 is returned.</p>
+      <p class="heading1 Badge_get">/Motors/?id={MOTORINDEX}</p>
+      <p class="Description"><p>Gets all properties of specific motor. If requested motor is not found or is not available due hardware failure error code 404 is returned.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -322,7 +329,7 @@
       
       
     </div><!–– end method ––>
-</div>
+</div> 
 
         </div>  
 

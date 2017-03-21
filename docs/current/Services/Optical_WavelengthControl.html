@@ -1,33 +1,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Operations at /Motors</title>
-
-    <link rel="stylesheet" type="text/css" href="..\assets\CommonStyle.css">
-
-</head>
+    <title></title>
+<link rel="stylesheet" type="text/css" href="..\assets\CommonStyle.css"></head>
 <body>
     <div id="content">
 
         <div id="container" style="width:100%;">
 
-            <div id="MainMethodsMenu" class="MainMethodsMenu">
-
-            <div class="MainMethodsMenuItem"><a href="#GetExpandedInteractions"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">ExpandedInteractions</div></div>
-<div class="MainMethodsMenuItem"><a href="#FinishWavelengthSettingAfterUserActions"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">FinishWavelengthSettingAfterUserActions</div></div>
-<div class="MainMethodsMenuItem"><a href="#GetOpticalSystemData"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">OpticalSystemData</div></div>
-<div class="MainMethodsMenuItem"><a href="#GetOutput"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Output</div></div>
-<div class="MainMethodsMenuItem"><a href="#GetOutputInteraction"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Output/Interaction</div></div>
-<div class="MainMethodsMenuItem"><a href="#GetOutputWavelength"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Output/Wavelength</div></div>
-<div class="MainMethodsMenuItem"><a href="#GetPossibleOutputsForWavelength"><span class="badge badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">PossibleOutputsForWavelength</div></div>
-<div class="MainMethodsMenuItem"><a href="#SetWavelength"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">SetWavelength</div></div>
-<div class="MainMethodsMenuItem"><a href="#SetWavelengthUsingAnyInteraction"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">SetWavelengthUsingAnyInteraction</div></div>
+            <div id="MainMethodsMenu" class="MainMethodsMenu"><div class="MainMethodsMenuItem"><a href="#GetExpandedInteractions"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">ExpandedInteractions</div></div>
+<div class="MainMethodsMenuItem"><a href="#FinishWavelengthSettingAfterUserActions"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">FinishWavelengthSettingAfterUserActions</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetOpticalSystemData"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">OpticalSystemData</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetOutput"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Output</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetOutputInteraction"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Output/Interaction</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetOutputWavelength"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Output/Wavelength</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetPossibleOutputsForWavelength"><span class="Badge Badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">PossibleOutputsForWavelength</div></div>
+<div class="MainMethodsMenuItem"><a href="#SetWavelength"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">SetWavelength</div></div>
+<div class="MainMethodsMenuItem"><a href="#SetWavelengthUsingAnyInteraction"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">SetWavelengthUsingAnyInteraction</div></div>
 </div>
 
             <div id="MethodsSubPage" class="MethodsSubPage"><!–– start method ––>
 <div id="content"><a id="GetExpandedInteractions"></a>
-      <p class="heading1 badge_get">  /Optical/WavelengthControl/ExpandedInteractions</p>
-      <p class="description">Gets all interactions with their calibration ranges in current optical configuration expanded to simple representation.</p>
+      <p class="heading1 Badge_get">/Optical/WavelengthControl/ExpandedInteractions</p>
+      <p class="Description"><p>Gets all interactions with their calibration ranges in current optical configuration expanded to simple representation.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -54,8 +50,25 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="FinishWavelengthSettingAfterUserActions"></a>
-      <p class="heading1 badge_put">  /Optical/WavelengthControl/FinishWavelengthSettingAfterUserActions</p>
-      <p class="description">Client application should call this method after wavelength has been set and user's manual operations are completed.This method needs to be called only if setting wavelength required actions by user.If RestoreShutterState is true and shutter was open before setting wavelength it will be opened again.</p>
+      <p class="heading1 Badge_put">/Optical/WavelengthControl/FinishWavelengthSettingAfterUserActions</p>
+      <p class="Description"><p>Client application should call this method after wavelength has been set and user's manual operations are completed.
+This method needs to be called only if setting wavelength required actions by user.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">RestoreShutter</td>
+<td style="text-align: center;">If set to true and shutter was open before setting wavelength it will be opened again.</td>
+</tr>
+</tbody>
+</table>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -80,8 +93,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="GetOpticalSystemData"></a>
-      <p class="heading1 badge_get">  /Optical/WavelengthControl/OpticalSystemData</p>
-      <p class="description">Gets information about current and last set wavelength and some additional info.</p>
+      <p class="heading1 Badge_get">/Optical/WavelengthControl/OpticalSystemData</p>
+      <p class="Description"><p>Gets information about current and last set wavelength and some additional info.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -178,8 +192,52 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="GetOutput"></a>
-      <p class="heading1 badge_get">  /Optical/WavelengthControl/Output</p>
-      <p class="description">Gets current output information (wavelength, interaction, calculated motor positions and so on).</p>
+      <p class="heading1 Badge_get">/Optical/WavelengthControl/Output</p>
+      <p class="Description"><p>Gets current output information (wavelength, interaction, calculated motor positions and so on).</p>
+<h4 id="returned-properties">Returned properties</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Interaction</td>
+<td style="text-align: center;">Currently used interaction. NON if wavelength is not set.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Wavelength</td>
+<td style="text-align: center;">Currently set wavelength. -1 if wavelength is not set.</td>
+</tr>
+<tr>
+<td style="text-align: center;">IsWavelengthStrict</td>
+<td style="text-align: center;">True if all motors positions match calibration exactly.</td>
+</tr>
+<tr>
+<td style="text-align: center;">IsWavelengthSettingInProgress</td>
+<td style="text-align: center;">True if wavelength is being set now. This includes both motor movement and user actions (if any).</td>
+</tr>
+<tr>
+<td style="text-align: center;">WavelengthSettingCompletionPart</td>
+<td style="text-align: center;">If IsWavelengthSettingInProgress==true indicates completion of motor movement. Range is 0-1.0.</td>
+</tr>
+<tr>
+<td style="text-align: center;">IsWaitingForUserAction</td>
+<td style="text-align: center;">True if motors have been moved to their target positions and user has to perform manual operations. Call /FinishWavelengthSettingAfterUserActions after these operations are completed by user.</td>
+</tr>
+<tr>
+<td style="text-align: center;">IsUserActionCompleted</td>
+<td style="text-align: center;">True if required user operations have been completed and confirmed bu user (using /FinishWavelengthSettingAfterUserActions).</td>
+</tr>
+<tr>
+<td style="text-align: center;">Messages</td>
+<td style="text-align: center;">Messages with instructions/images to user.</td>
+</tr>
+</tbody>
+</table>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -230,8 +288,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="GetOutputInteraction"></a>
-      <p class="heading1 badge_get">  /Optical/WavelengthControl/Output/Interaction</p>
-      <p class="description">Gets current output interaction string. If wavelength setting is in progress returns target wavelengths interaction.</p>
+      <p class="heading1 Badge_get">/Optical/WavelengthControl/Output/Interaction</p>
+      <p class="Description"><p>Gets current output interaction string. If wavelength setting is in progress returns target wavelengths interaction.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -246,8 +305,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="GetOutputWavelength"></a>
-      <p class="heading1 badge_get">  /Optical/WavelengthControl/Output/Wavelength</p>
-      <p class="description">Gets current output wavelength. If wavelength setting is in progress returns target wavelength.</p>
+      <p class="heading1 Badge_get">/Optical/WavelengthControl/Output/Wavelength</p>
+      <p class="Description"><p>Gets current output wavelength. If wavelength setting is in progress returns target wavelength.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -262,8 +322,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="GetPossibleOutputsForWavelength"></a>
-      <p class="heading1 badge_post">  /Optical/WavelengthControl/PossibleOutputsForWavelength</p>
-      <p class="description">Gets all possible ways to set specific wavelength.</p>
+      <p class="heading1 Badge_post">/Optical/WavelengthControl/PossibleOutputsForWavelength</p>
+      <p class="Description"><p>Gets all possible ways to set specific wavelength.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -331,9 +392,71 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="SetWavelength"></a>
-      <p class="heading1 badge_put">  /Optical/WavelengthControl/SetWavelength</p>
-      <p class="description">Sets new wavelength. Interaction string will be used to select which interaction to use.
-        It might be simple interaction string (SH-SIG) or expandable (#-SIG). Use * to match use all interactions.</p>
+      <p class="heading1 Badge_put">/Optical/WavelengthControl/SetWavelength</p>
+      <p class="Description"><p>Sets new wavelength.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Interaction</strong></td>
+<td style="text-align: center;">Simple interaction string (SH-SIG) or expandable (#-SIG). Use * to match use all interactions.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Wavelength</strong></td>
+<td style="text-align: center;">Wavelength to set in nanometers.</td>
+</tr>
+<tr>
+<td style="text-align: center;">IgnoreSeparation</td>
+<td style="text-align: center;">If set to true separation configuration won't be used (includes both motors and messages).</td>
+</tr>
+<tr>
+<td style="text-align: center;">DontTouchShutterOnInteractionChange</td>
+<td style="text-align: center;">Leaves shutter opened while setting wavelength, unless there are new messages to user.</td>
+</tr>
+<tr>
+<td style="text-align: center;">SetForBackground</td>
+<td style="text-align: center;">If set to true position of one motor is modified as configured in calibration to measure background radiation power.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Priorities</td>
+<td style="text-align: center;">(Can be ignored if Interaction is in in simple representation.) Priorities will be used to select interaction if there are more than one way to set wavelength using supplied Interaction.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returned-properties">Returned properties</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>IsSuccess</strong></td>
+<td style="text-align: center;">True if requested wavelength can be set.</td>
+</tr>
+<tr>
+<td style="text-align: center;">ErrorMessage</td>
+<td style="text-align: center;">If IsSuccess is false, contains reason why wavelength can not be set.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Messages</td>
+<td style="text-align: center;">All messages for user. New messages (compared with previous output) have property IsNew set to true.</td>
+</tr>
+<tr>
+<td style="text-align: center;">WillRequireUserActions</td>
+<td style="text-align: center;">True if user will have to perform manual operations after motors are in positons for requested wavelength.</td>
+</tr>
+</tbody>
+</table>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -415,8 +538,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="SetWavelengthUsingAnyInteraction"></a>
-      <p class="heading1 badge_put">  /Optical/WavelengthControl/SetWavelengthUsingAnyInteraction</p>
-      <p class="description">Sets new wavelength. Any of the possible interactions that support this wavelength will be used. If you need extra options use method SetWavelength.</p>
+      <p class="heading1 Badge_put">/Optical/WavelengthControl/SetWavelengthUsingAnyInteraction</p>
+      <p class="Description"><p>Sets new wavelength. Any of the possible interactions that support this wavelength will be used. If you need extra options use method SetWavelength.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -482,7 +606,7 @@
       
       
     </div><!–– end method ––>
-</div>
+</div> 
 
         </div>  
 

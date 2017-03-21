@@ -1,31 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Operations at /Motors</title>
-
-    <link rel="stylesheet" type="text/css" href="..\assets\CommonStyle.css">
-
-</head>
+    <title></title>
+<link rel="stylesheet" type="text/css" href="..\assets\CommonStyle.css"></head>
 <body>
     <div id="content">
 
         <div id="container" style="width:100%;">
 
-            <div id="MainMethodsMenu" class="MainMethodsMenu">
-
-            <div class="MainMethodsMenuItem"><a href="#CalculateMaxPossibleSpeedForSmoothMovement"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CalculateMaxPossibleSpeedForSmoothMovement</div></div>
-<div class="MainMethodsMenuItem"><a href="#CalculateMaxPossibleSpeedForSmoothMovementRoundTrip"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CalculateMaxPossibleSpeedForSmoothMovementRoundTrip</div></div>
-<div class="MainMethodsMenuItem"><a href="#MoveFromAToB"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">MoveFromAToB</div></div>
-<div class="MainMethodsMenuItem"><a href="#GetStatus"><span class="badge badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Status</div></div>
-<div class="MainMethodsMenuItem"><a href="#StopScanImmediately"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">StopScanImmediately</div></div>
-<div class="MainMethodsMenuItem"><a href="#StopScanOnEndpoint"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">StopScanOnEndpoint</div></div>
-<div class="MainMethodsMenuItem"><a href="#StopScanOnStartingPosition"><span class="badge badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">StopScanOnStartingPosition</div></div>
+            <div id="MainMethodsMenu" class="MainMethodsMenu"><div class="MainMethodsMenuItem"><a href="#CalculateMaxPossibleSpeedForSmoothMovement"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CalculateMaxPossibleSpeedForSmoothMovement</div></div>
+<div class="MainMethodsMenuItem"><a href="#CalculateMaxPossibleSpeedForSmoothMovementRoundTrip"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CalculateMaxPossibleSpeedForSmoothMovementRoundTrip</div></div>
+<div class="MainMethodsMenuItem"><a href="#MoveFromAToB"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">MoveFromAToB</div></div>
+<div class="MainMethodsMenuItem"><a href="#GetStatus"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Status</div></div>
+<div class="MainMethodsMenuItem"><a href="#StopScanImmediately"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">StopScanImmediately</div></div>
+<div class="MainMethodsMenuItem"><a href="#StopScanOnEndpoint"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">StopScanOnEndpoint</div></div>
+<div class="MainMethodsMenuItem"><a href="#StopScanOnStartingPosition"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">StopScanOnStartingPosition</div></div>
 </div>
 
             <div id="MethodsSubPage" class="MethodsSubPage"><!–– start method ––>
 <div id="content"><a id="CalculateMaxPossibleSpeedForSmoothMovement"></a>
-      <p class="heading1 badge_put">  /SmoothWavelengthSetter/CalculateMaxPossibleSpeedForSmoothMovement</p>
-      <p class="description">Calculates max possible speed for scan with passed parameters, from start wavelength to end wavelength.</p>
+      <p class="heading1 Badge_put">/SmoothWavelengthSetter/CalculateMaxPossibleSpeedForSmoothMovement</p>
+      <p class="Description"><p>Calculates max possible speed for scan with passed parameters, from start wavelength to end wavelength. See parameters description at \MoveFromAToB for more information.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -64,8 +60,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="CalculateMaxPossibleSpeedForSmoothMovementRoundTrip"></a>
-      <p class="heading1 badge_put">  /SmoothWavelengthSetter/CalculateMaxPossibleSpeedForSmoothMovementRoundTrip</p>
-      <p class="description">Calculates max possible speed for scan with passed parameters, from start wavelength to end wavelength and back again.</p>
+      <p class="heading1 Badge_put">/SmoothWavelengthSetter/CalculateMaxPossibleSpeedForSmoothMovementRoundTrip</p>
+      <p class="Description"><p>Calculates max possible speed for scan with passed parameters, from start wavelength to end wavelength and back again. See parameters description at \MoveFromAToB for more information.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -104,8 +101,95 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="MoveFromAToB"></a>
-      <p class="heading1 badge_put">  /SmoothWavelengthSetter/MoveFromAToB</p>
-      <p class="description">
+      <p class="heading1 Badge_put">/SmoothWavelengthSetter/MoveFromAToB</p>
+      <p class="Description"><p>Starts smooth wavelength scan.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Explanation</th>
+<th style="text-align: center;">Recommended default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">MaxMotorPositionError</td>
+<td style="text-align: center;">Max allowable motor position error on segment end in speed/acceleration calculations in steps.</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr>
+<td style="text-align: center;">StartWavelength</td>
+<td style="text-align: center;">Starting wavelength from which the scan will be performed.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">EndWavelength</td>
+<td style="text-align: center;">Pair for StartWavelength.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Repeats</td>
+<td style="text-align: center;">Value of 1 means to move from StartWavelength to EndWavelength and stop there, 2 – move to EndWavelength and back again, and so on.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Interaction</td>
+<td style="text-align: center;">Interaction that will be used (same usage as when setting wavelength). Multi-interaction scan is currently not implemented.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">CustomWavelengthStepSize</td>
+<td style="text-align: center;">Step size in nanometers used for calibration curve segmentation. In general, use bigger step size for longer wavelengths and faster speeds.</td>
+<td style="text-align: center;">0 (auto select by algorithm)</td>
+</tr>
+<tr>
+<td style="text-align: center;">IgnoreSeparationConfiguration</td>
+<td style="text-align: center;">If true, motors that should be moved because of separation calibration will be ignored.</td>
+<td style="text-align: center;">false</td>
+</tr>
+<tr>
+<td style="text-align: center;">NanometersPerSeconds</td>
+<td style="text-align: center;">Speed of scan. Speed will be slower on range ends, where motors have to accelerate from standing position or stop. Parameter <strong>MaxSpeedError allows</strong> to have non-constant movement speed.</td>
+<td style="text-align: center;">&lt;=Max possible speed</td>
+</tr>
+<tr>
+<td style="text-align: center;">MaxSpeedError</td>
+<td style="text-align: center;">Value of x means that any segment can have slower/faster speed, as long as duration difference is smaller than x*DurationWithOptimalSpeed, where DurationWithOptimalSpeed=WavelengthStepSize/ NanometersPerSeconds.  If you application requires constant scan speed, use small positive value, otherwise you might be able to reach higher speeds with large value.</td>
+<td style="text-align: center;">0.1 or 20 if constant speed</td>
+</tr>
+<tr>
+<td style="text-align: center;">CollectMotorPositionsDebugInfo</td>
+<td style="text-align: center;">Actual motor positions will be collected during scan with high frequency. At the end of each repeat file containing actual and ideal positions for all motors will be written to folder \Temporary\SmoothSetterDebug (relative to server executable). Data can viewed with WinTopas4 Smooth Scanner tool (MISC tab) by dragging file on graph to check whether scan is sufficiently accurate.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SelectMaxSpeedFastOnServerSide</td>
+<td style="text-align: center;">Select max possible speed on server side. Shortened binary search is used, so selected speed might be up to 25% slower than fastest possible. Behavior likely to change in future versions.</td>
+<td style="text-align: center;">false</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returned-properties">Returned properties</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">IsSuccess</td>
+<td style="text-align: center;">True if requested scan can be performed.</td>
+</tr>
+<tr>
+<td style="text-align: center;">ErrorMessage</td>
+<td style="text-align: center;">If IsSuccess is false, contains reason why scan can not be performed.</td>
+</tr>
+</tbody>
+</table>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -148,8 +232,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="GetStatus"></a>
-      <p class="heading1 badge_get">  /SmoothWavelengthSetter/Status</p>
-      <p class="description">Get status of smooth wavelength setter.</p>
+      <p class="heading1 Badge_get">/SmoothWavelengthSetter/Status</p>
+      <p class="Description"><p>Get status of smooth wavelength setter.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -172,8 +257,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="StopScanImmediately"></a>
-      <p class="heading1 badge_put">  /SmoothWavelengthSetter/StopScanImmediately</p>
-      <p class="description">Stops currently running scan immediately.</p>
+      <p class="heading1 Badge_put">/SmoothWavelengthSetter/StopScanImmediately</p>
+      <p class="Description"><p>Stops currently running scan immediately.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -183,8 +269,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="StopScanOnEndpoint"></a>
-      <p class="heading1 badge_put">  /SmoothWavelengthSetter/StopScanOnEndpoint</p>
-      <p class="description">Stops currently running scan on either end of range.</p>
+      <p class="heading1 Badge_put">/SmoothWavelengthSetter/StopScanOnEndpoint</p>
+      <p class="Description"><p>Stops currently running scan on either end of range.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -194,8 +281,9 @@
     </div><!–– end method ––>
 <!–– start method ––>
 <div id="content"><a id="StopScanOnStartingPosition"></a>
-      <p class="heading1 badge_put">  /SmoothWavelengthSetter/StopScanOnStartingPosition</p>
-      <p class="description">Stops currently running scan on starting position.</p>
+      <p class="heading1 Badge_put">/SmoothWavelengthSetter/StopScanOnStartingPosition</p>
+      <p class="Description"><p>Stops currently running scan on starting position.</p>
+</p>
       
       <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
         <b>HTTP Method: </b>
@@ -203,7 +291,7 @@
       </p>
       
     </div><!–– end method ––>
-</div>
+</div> 
 
         </div>  
 
