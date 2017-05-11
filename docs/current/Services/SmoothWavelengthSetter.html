@@ -1,108 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-<link rel="stylesheet" type="text/css" href="..\assets\CommonStyle.css"></head>
-<body>
-    <div id="content">
+<html><head>
+            		<!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-        <div id="container" style="width:100%;">
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-            <div id="MainMethodsMenu" class="MainMethodsMenu"><div class="MainMethodsMenuItem"><a href="#CalculateMaxPossibleSpeedForSmoothMovement"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CalculateMaxPossibleSpeedForSmoothMovement</div></div>
-<div class="MainMethodsMenuItem"><a href="#CalculateMaxPossibleSpeedForSmoothMovementRoundTrip"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CalculateMaxPossibleSpeedForSmoothMovementRoundTrip</div></div>
-<div class="MainMethodsMenuItem"><a href="#MoveFromAToB"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">MoveFromAToB</div></div>
-<div class="MainMethodsMenuItem"><a href="#GetStatus"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Status</div></div>
-<div class="MainMethodsMenuItem"><a href="#StopScanImmediately"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">StopScanImmediately</div></div>
-<div class="MainMethodsMenuItem"><a href="#StopScanOnEndpoint"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">StopScanOnEndpoint</div></div>
-<div class="MainMethodsMenuItem"><a href="#StopScanOnStartingPosition"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">StopScanOnStartingPosition</div></div>
-</div>
+            <!-- Latest compiled and minified JavaScript -->
+            		<link rel="stylesheet" type="text/css" href="..\assets\CommonStyle.css"></head>
+            		
+            		<body>
+                <div id="content">
 
-            <div id="MethodsSubPage" class="MethodsSubPage"><!–– start method ––>
-<div id="content"><a id="CalculateMaxPossibleSpeedForSmoothMovement"></a>
-      <p class="heading1 Badge_put">/SmoothWavelengthSetter/CalculateMaxPossibleSpeedForSmoothMovement</p>
-      <p class="Description"><p>Calculates max possible speed for scan with passed parameters, from start wavelength to end wavelength. See parameters description at \MoveFromAToB for more information.</p>
-</p>
-      
-      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
-        <b>HTTP Method: </b>
-        <span class="method">PUT</span>
-      </p>
-      
-      
-      <p>
-        <a class="example" name="request-json">The following is an example request Json body:</a>
-        <pre class="request-json">{
-	"CollectMotorPositionsDebugInfo":true,
-	"CustomWavelengthStepSize":1.26743233E+15,
-	"EndWavelength":1.26743233E+15,
-	"IgnoreSeparationConfiguration":true,
-	"Interaction":"String content",
-	"MaxMotorPositionError":1.26743233E+15,
-	"MaxSpeedError":1.26743233E+15,
-	"StartWavelength":1.26743233E+15
-}</pre>
-      </p>
-      
-      <p>
-        <a class="example" name="response-json">The following is an example response Json body:</a>
-        <pre class="response-json">{
-	"IsSuccess":true,
-	"LimitingFactorErrorMessage":"String content",
-	"MaxSpeed":1.26743233E+15
-}</pre>
-      </p>
-      
-      
-      
-      
-      
-      
-    </div><!–– end method ––>
-<!–– start method ––>
-<div id="content"><a id="CalculateMaxPossibleSpeedForSmoothMovementRoundTrip"></a>
-      <p class="heading1 Badge_put">/SmoothWavelengthSetter/CalculateMaxPossibleSpeedForSmoothMovementRoundTrip</p>
-      <p class="Description"><p>Calculates max possible speed for scan with passed parameters, from start wavelength to end wavelength and back again. See parameters description at \MoveFromAToB for more information.</p>
-</p>
-      
-      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
-        <b>HTTP Method: </b>
-        <span class="method">PUT</span>
-      </p>
-      
-      
-      <p>
-        <a class="example" name="request-json">The following is an example request Json body:</a>
-        <pre class="request-json">{
-	"CollectMotorPositionsDebugInfo":true,
-	"CustomWavelengthStepSize":1.26743233E+15,
-	"EndWavelength":1.26743233E+15,
-	"IgnoreSeparationConfiguration":true,
-	"Interaction":"String content",
-	"MaxMotorPositionError":1.26743233E+15,
-	"MaxSpeedError":1.26743233E+15,
-	"StartWavelength":1.26743233E+15
-}</pre>
-      </p>
-      
-      <p>
-        <a class="example" name="response-json">The following is an example response Json body:</a>
-        <pre class="response-json">{
-	"IsSuccess":true,
-	"LimitingFactorErrorMessage":"String content",
-	"MaxSpeed":1.26743233E+15
-}</pre>
-      </p>
-      
-      
-      
-      
-      
-      
-    </div><!–– end method ––>
-<!–– start method ––>
-<div id="content"><a id="MoveFromAToB"></a>
-      <p class="heading1 Badge_put">/SmoothWavelengthSetter/MoveFromAToB</p>
-      <p class="Description"><p>Starts smooth wavelength scan.</p>
+                    <div id="container" style="width:100%;">
+
+                        <div id="MainMethodsMenu" class="MainMethodsMenu"><div class="MainMethodsMenuItem"><a href="#/MoveFromAToB"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">MoveFromAToB</div></div><div class="MainMethodsMenuItem"><a href="#/StopScanImmediately"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">StopScanImmediately</div></div><div class="MainMethodsMenuItem"><a href="#/StopScanOnEndpoint"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">StopScanOnEndpoint</div></div><div class="MainMethodsMenuItem"><a href="#/StopScanOnStartingPosition"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">StopScanOnStartingPosition</div></div><div class="MainMethodsMenuItem"><a href="#/CalculateMaxPossibleSpeedForSmoothMovement"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CalculateMaxPossibleSpeedForSmoothMovement</div></div><div class="MainMethodsMenuItem"><a href="#/CalculateMaxPossibleSpeedForSmoothMovementRoundTrip"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CalculateMaxPossibleSpeedForSmoothMovementRoundTrip</div></div><div class="MainMethodsMenuItem"><a href="#/Status"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Status</div></div></div>
+
+                        <div id="MethodsSubPage" class="MethodsSubPage"><p><a id="/MoveFromAToB"></a><p class="Uri Badge_put">/MoveFromAToB</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Starts smooth wavelength scan.</p>
 <h4 id="parameters">Parameters</h4>
 <table>
 <thead>
@@ -189,112 +102,65 @@
 </tr>
 </tbody>
 </table>
-</p>
-      
-      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
-        <b>HTTP Method: </b>
-        <span class="method">PUT</span>
-      </p>
-      
-      
-      <p>
-        <a class="example" name="request-json">The following is an example request Json body:</a>
-        <pre class="request-json">{
-	"CollectMotorPositionsDebugInfo":true,
-	"CustomWavelengthStepSize":1.26743233E+15,
-	"EndWavelength":1.26743233E+15,
-	"IgnoreSeparationConfiguration":true,
-	"Interaction":"String content",
-	"MaxMotorPositionError":1.26743233E+15,
-	"MaxSpeedError":1.26743233E+15,
-	"StartWavelength":1.26743233E+15,
-	"NanometersPerSeconds":1.26743233E+15,
-	"Repeats":2147483647,
-	"SelectMaxSpeedFastOnServerSide":true,
-	"TempPerformMotorPositionReadDebug":true
-}</pre>
-      </p>
-      
-      <p>
-        <a class="example" name="response-json">The following is an example response Json body:</a>
-        <pre class="response-json">{
-	"CantSetWavelength":true,
-	"ErrorMessage":"String content",
-	"IsSuccess":true
-}</pre>
-      </p>
-      
-      
-      
-      
-      
-      
-    </div><!–– end method ––>
-<!–– start method ––>
-<div id="content"><a id="GetStatus"></a>
-      <p class="heading1 Badge_get">/SmoothWavelengthSetter/Status</p>
-      <p class="Description"><p>Get status of smooth wavelength setter.</p>
-</p>
-      
-      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
-        <b>HTTP Method: </b>
-        <span class="method">GET</span>
-      </p>
-      
-      
-      <p>
-        <a class="example" name="response-json">The following is an example response Json body:</a>
-        <pre class="response-json">{
-	"IsRunning":true,
-	"IsStopScheduled":true,
-	"NanometersPerSecondIncludingStartStop":1.26743233E+15,
-	"RepeatsLeft":2147483647
-}</pre>
-      </p>
-      
-      
-      
-    </div><!–– end method ––>
-<!–– start method ––>
-<div id="content"><a id="StopScanImmediately"></a>
-      <p class="heading1 Badge_put">/SmoothWavelengthSetter/StopScanImmediately</p>
-      <p class="Description"><p>Stops currently running scan immediately.</p>
-</p>
-      
-      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
-        <b>HTTP Method: </b>
-        <span class="method">PUT</span>
-      </p>
-      
-    </div><!–– end method ––>
-<!–– start method ––>
-<div id="content"><a id="StopScanOnEndpoint"></a>
-      <p class="heading1 Badge_put">/SmoothWavelengthSetter/StopScanOnEndpoint</p>
-      <p class="Description"><p>Stops currently running scan on either end of range.</p>
-</p>
-      
-      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
-        <b>HTTP Method: </b>
-        <span class="method">PUT</span>
-      </p>
-      
-    </div><!–– end method ––>
-<!–– start method ––>
-<div id="content"><a id="StopScanOnStartingPosition"></a>
-      <p class="heading1 Badge_put">/SmoothWavelengthSetter/StopScanOnStartingPosition</p>
-      <p class="Description"><p>Stops currently running scan on starting position.</p>
-</p>
-      
-      <p class="HttpMethod" xmlns="http://www.w3.org/1999/xhtml">
-        <b>HTTP Method: </b>
-        <span class="method">PUT</span>
-      </p>
-      
-    </div><!–– end method ––>
-</div> 
+</p><div hidden=""></div><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">{
+  "CollectMotorPositionsDebugInfo": false,
+  "CustomWavelengthStepSize": 0,
+  "EndWavelength": 0,
+  "IgnoreSeparationConfiguration": false,
+  "Interaction": "art",
+  "MaxMotorPositionError": 16,
+  "MaxSpeedError": 0.03,
+  "StartWavelength": 0,
+  "NanometersPerSeconds": 0,
+  "Repeats": 1,
+  "SelectMaxSpeedFastOnServerSide": false,
+  "TempPerformMotorPositionReadDebug": false
+}</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+  "CantSetWavelength": false,
+  "ErrorMessage": "",
+  "IsSuccess": false
+}</pre></p></p><p><a id="/StopScanImmediately"></a><p class="Uri Badge_put">/StopScanImmediately</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Stops currently running scan immediately.</p>
+</p><div hidden=""></div><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response body is empty.</div></p></p><p><a id="/StopScanOnEndpoint"></a><p class="Uri Badge_put">/StopScanOnEndpoint</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Stops currently running scan on either end of range.</p>
+</p><div hidden=""></div><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response body is empty.</div></p></p><p><a id="/StopScanOnStartingPosition"></a><p class="Uri Badge_put">/StopScanOnStartingPosition</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Stops currently running scan on starting position.</p>
+</p><div hidden=""></div><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response body is empty.</div></p></p><p><a id="/CalculateMaxPossibleSpeedForSmoothMovement"></a><p class="Uri Badge_put">/CalculateMaxPossibleSpeedForSmoothMovement</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Calculates max possible speed for scan with passed parameters, from start wavelength to end wavelength. See parameters description at \MoveFromAToB for more information.</p>
+</p><div hidden=""></div><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">{
+  "CollectMotorPositionsDebugInfo": false,
+  "CustomWavelengthStepSize": 0,
+  "EndWavelength": 0,
+  "IgnoreSeparationConfiguration": false,
+  "Interaction": "Brooklyn",
+  "MaxMotorPositionError": 16,
+  "MaxSpeedError": 0.03,
+  "StartWavelength": 0
+}</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+  "IsSuccess": true,
+  "LimitingFactorErrorMessage": "",
+  "MaxSpeed": 0
+}</pre></p></p><p><a id="/CalculateMaxPossibleSpeedForSmoothMovementRoundTrip"></a><p class="Uri Badge_put">/CalculateMaxPossibleSpeedForSmoothMovementRoundTrip</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Calculates max possible speed for scan with passed parameters, from start wavelength to end wavelength and back again. See parameters description at \MoveFromAToB for more information.</p>
+</p><div hidden=""></div><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">{
+  "CollectMotorPositionsDebugInfo": false,
+  "CustomWavelengthStepSize": 0,
+  "EndWavelength": 0,
+  "IgnoreSeparationConfiguration": false,
+  "Interaction": "cleanse",
+  "MaxMotorPositionError": 16,
+  "MaxSpeedError": 0.03,
+  "StartWavelength": 0
+}</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+  "IsSuccess": true,
+  "LimitingFactorErrorMessage": "",
+  "MaxSpeed": 0
+}</pre></p></p><p><a id="/Status"></a><p class="Uri Badge_get">/Status</p><div class="HttpMethod">Http method: GET</div><div hidden=""></div><p><p>Get status of smooth wavelength setter.</p>
+</p><div hidden=""></div><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+  "IsRunning": false,
+  "IsStopScheduled": false,
+  "NanometersPerSecondIncludingStartStop": 0,
+  "RepeatsLeft": 97
+}</pre></p></p></div> 
 
-        </div>  
+                    </div>  
 
-    </div>
-</body>
-</html>
+                </div>
+            </body>
+
+            		</html>
