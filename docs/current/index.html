@@ -20,9 +20,11 @@
 
             <p><a href="https://github.com/DomasM/Topas4PublicAPI/archive/master.zip"><strong>Click here to download SDK as zip file</strong></a>
 (Includes examples, .NET library, and documentation for off-line reference).</p>
+<p><a href="https://www.nuget.org/packages/LightConversion.Topas4/"><strong>Nuget package can be found here</strong></a></p>
+<p><a href="https://domasm.github.io/Topas4Info/"><strong>For general Topas4 information see here</strong></a></p>
 <p><a href="https://lightconupdater.blob.core.windows.net/installers/WinTopas4-setup.exe">Click here to download WinTopas4 application installer.</a></p>
-<p><a href="https://domasm.github.io/Topas4Info/">See here for general WinTopas4 information</a></p>
-<p><strong>Topas4Server version 0.7.0.0 or later required.</strong></p>
+<p><strong>Topas4Server version 0.7.0.0 or later required.</strong>
+<strong>Topas4Server version 1.3.0.0 or later required for motor reset (homing) functionality.</strong></p>
 <h3 id="principal-concepts">Principal concepts</h3>
 <p>Topas4 software system consists of server application and client applications. For each physical device there will be only one server application and it must be running all the time. All client applications can control the device by using REST API, which is implemented by server application. Server application and all client applications provided by Light Conversion (WinTopas4, PowerScanner-T4, spectraLight and others) are written in a way to allow multiple clients to use the same device at the same time. Below are listed key concepts of Topas4 API.</p>
 <ol>
