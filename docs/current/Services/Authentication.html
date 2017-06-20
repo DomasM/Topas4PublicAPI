@@ -19,18 +19,19 @@
 </p><div hidden=""></div><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">false</pre></p></p><p><a id="/UsersWithAccessRights"></a><p class="Uri Badge_get">/UsersWithAccessRights</p><div class="HttpMethod">Http method: GET</div><div hidden=""></div><p><p>Returns list of user with access rights.</p>
 </p><div hidden=""></div><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">[
   {
-    "IPAddress": "2569 Veranda Place ",
-    "PCName": "fact"
+    "IPAddress": "2298 Boulevard Court ",
+    "PCName": "you"
   },
   {
-    "IPAddress": "2084 Nixon Court ",
-    "PCName": "Ethnic"
+    "IPAddress": "5379 Applegate Court ",
+    "PCName": "williamsburg"
   }
 ]</pre></p></p><p><a id="/StartAuthenticationByInterlockExplicitIP"></a><p class="Uri Badge_post">/StartAuthenticationByInterlockExplicitIP</p><div class="HttpMethod">Http method: POST</div><div hidden=""></div><p><p>Start authentication for specific IP address. User has to repeatedly press interlock button to authenticate device.</p>
-</p><div hidden=""></div><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">"d1c9201b"</pre></p><p><div>Response body is empty.</div></p></p><p><a id="/StartAuthenticationByInterlockExplicitPCName"></a><p class="Uri Badge_post">/StartAuthenticationByInterlockExplicitPCName</p><div class="HttpMethod">Http method: POST</div><div hidden=""></div><p><p>Start authentication for specific PC name. User has to repeatedly press interlock button to authenticate device.</p>
-</p><div hidden=""></div><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">"8502c9a9"</pre></p><p><div>Response body is empty.</div></p></p><p><a id="/StartAuthenticationByInterlock"></a><p class="Uri Badge_post">/StartAuthenticationByInterlock</p><div class="HttpMethod">Http method: POST</div><div hidden=""></div><p><p>Start authentication. User has to repeatedly press interlock button to authenticate device. PC name will be used to identify user with fallback to IP address.</p>
+</p><div hidden=""></div><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">"aed7ec07"</pre></p><p><div>Response body is empty.</div></p></p><p><a id="/StartAuthenticationByInterlockExplicitPCName"></a><p class="Uri Badge_post">/StartAuthenticationByInterlockExplicitPCName</p><div class="HttpMethod">Http method: POST</div><div hidden=""></div><p><p>Start authentication for specific PC name. User has to repeatedly press interlock button to authenticate device.</p>
+</p><div hidden=""></div><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">"4f7c5070"</pre></p><p><div>Response body is empty.</div></p></p><p><a id="/StartAuthenticationByInterlock"></a><p class="Uri Badge_post">/StartAuthenticationByInterlock</p><div class="HttpMethod">Http method: POST</div><div hidden=""></div><p><p>Start authentication. User has to repeatedly press interlock button to authenticate device. PC name will be used to identify user with fallback to IP address.</p>
 </p><div hidden=""></div><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response body is empty.</div></p></p><p><a id="/AuthenticationStatus"></a><p class="Uri Badge_get">/AuthenticationStatus</p><div class="HttpMethod">Http method: GET</div><div hidden=""></div><p><p>Get status of authentication currently in progress.</p>
 </p><div hidden=""></div><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+  "AuthenticationHardwareFailure": false,
   "AuthenticationProgressPercent": 0,
   "CallerHasAccess": false,
   "IsAuthenticationInProgress": false
