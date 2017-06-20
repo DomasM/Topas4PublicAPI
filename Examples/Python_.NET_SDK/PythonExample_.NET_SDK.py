@@ -4,7 +4,7 @@ import clr
 import sys
 import msvcrt
 import time
-clr.AddReference(r"..\..\NET_SDK\Topas4Lib") #this is a reference to Topas4Lib.dll, which is located two directoies up
+clr.AddReference(r"..\..\NET_SDK\Topas4Lib") #this is a reference to Topas4Lib.dll, which is located two directories up
 
 from Topas4Lib import TopasDevice
 import Mint
@@ -61,7 +61,7 @@ class Topas4SDKExample:
         isShutterOpen = self.topas.ShutterService.GetIsShutterOpen()
         line = input(r"Do you want to " + ("close" if isShutterOpen  else "open") + r" shutter? (Y\N)").upper()
         if line == "Y" or line == "YES":
-           self.topas.ShutterService.SetShutterOpenClose(not isShutterOpen) 
+           self.topas.ShutterService.SetOpenCloseShutter(not isShutterOpen) 
 
     
     def waitTillWavelengthIsSet(self):
