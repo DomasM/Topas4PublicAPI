@@ -4,7 +4,7 @@ import sys
 import json
 
 class Topas4Locator:
-    """"Locates Topas4 devices on the same local area netork using UDP multicast"""
+    """"Locates Topas4 devices on the same local area network using UDP multicast"""
     def locate(self):
         # Create a UDP socket
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -16,7 +16,7 @@ class Topas4Locator:
        
 
         # Send data both to multicast address and to localhost
-        # localhost is for cases when server and client applications are running on the same PC, and PC might be not coonected to the network
+        # localhost is for cases when server and client applications are running on the same PC, and PC might be not connected to the network
         sock.sendto(message, multicastAddress)
         sock.sendto(message, localHostAddress)
 
