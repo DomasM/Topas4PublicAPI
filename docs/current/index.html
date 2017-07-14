@@ -24,7 +24,8 @@
 <p><a href="http://topas4info.lightcon.com/?utm_source=Topas4APIPage"><strong>For general Topas4 information see here</strong></a></p>
 <p><a href="https://lightconupdater.blob.core.windows.net/installers/WinTopas4-setup.exe">Click here to download WinTopas4 application installer.</a></p>
 <p><strong>Topas4Server version 0.7.0.0 or later required.</strong>
-<strong>Topas4Server version 1.3.0.0 or later required for motor reset (homing) functionality.</strong></p>
+<strong>Topas4Server version 1.3.0.0 or later required for motor reset (homing) functionality.</strong>
+<strong>Topas4Server version 1.4.2.0 or later required for saved motor positions functionality.</strong></p>
 <h3 id="principal-concepts">Principal concepts</h3>
 <p>Topas4 software system consists of server application and client applications. For each physical device there will be only one server application and it must be running all the time. All client applications can control the device by using REST API, which is implemented by server application. Server application and all client applications provided by Light Conversion (WinTopas4, PowerScanner-T4, spectraLight and others) are written in a way to allow multiple clients to use the same device at the same time. Below are listed key concepts of Topas4 API.</p>
 <ol>
@@ -58,6 +59,10 @@
 <p>Methods to authenticate controlling PC using interlock.</p>
 <ul>
 <li><strong><a href="Services/SmoothWavelengthSetter.html">Smooth wavelength setter</a></strong></li>
+</ul>
+<p>Methods to use saved motor positions</p>
+<ul>
+<li><strong><a href="Services/SavedMotorPositions.html">Saved motor positions</a></strong></li>
 </ul>
 <p>Smooth wavelength scanner allows to scan wavelength continuously without losing output with high speed by adjusting motors speeds and accelerations on the fly.
 This functionality is included in Public API.
