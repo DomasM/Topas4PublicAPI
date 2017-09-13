@@ -11,7 +11,7 @@ class Topas4Locator:
 
         multicastAddress = ('239.0.0.181', 7415)
         localHostAddress = ('127.255.255.255', 7415) #works as loopback broadcast for reused sockets
-        message = 'Topas4?'.encode('ascii')
+        message = 'Topas4?'.encode('UTF-8')
         devices = []
        
 
