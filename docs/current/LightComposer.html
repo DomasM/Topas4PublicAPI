@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>LightComposer Public API Main page</title>
+    <link rel="stylesheet" type="text/css" href="assets\CommonStyle.css" />
+</head>
+<body>
+    <div id="content">
+        <div class="topOfPageHeader">
+            LightComposer Public API main help page
+
+
+        </div>
+        <div id="out">
+
+            <a href="http://www.lightcon.com">
+                <img src="assets/images/LC-logo.png" alt="Light Convestion logo" style="width: 200px" />
+            </a>
+
+
+            <!--<p><a href="https://github.com/DomasM/Topas4PublicAPI/archive/master.zip"><strong>Click here to download SDK as zip file</strong></a>
+    (Includes examples, .NET library, and documentation for off-line reference).</p>-->
+            <!--<p><a href="https://www.nuget.org/packages/LightConversion.Topas4/"><strong>Nuget package can be found here</strong></a></p>-->
+            <!--<p><a href="http://topas4info.lightcon.com/?utm_source=Topas4APIPage"><strong>For general Topas4 information see here</strong></a></p>-->
+            <p><a href="https://lightconupdater.blob.core.windows.net/installers/LightComposer-setup.exe">Click here to download LightComposer application installer.</a></p>
+            <p><a href="https://lightconupdater.blob.core.windows.net/installers/WinTopas4-setup.exe">Click here to download WinTopas4 application installer.</a></p>
+            <p> <strong>Applies to LightComposer v1.7.0 and above</strong> </p>
+            <p> <strong>Preliminary</strong> </p> 
+            <h3 id="intro">Introduction</h3>
+            <p>
+                LightComposer is an end-user-oriented application for controlling OPA-based
+                laser sources produced by Light Conversion. Interactive laser system
+                control via the LightComposer GUI is described in the User Manual of a
+                particular  system, this document covers local and remote control via the
+                LightComposer API.
+            </p>
+            <p>
+                LightComposer provides a GUI for interactive laser system control and an
+                API service for remote control, automation and advanced applications.
+                LightComposer operates on top of Topas4, whose server component carries out
+                the actual hardware control. Depending on system configuration, one or more
+                Topas4 server instances are used for hardware control and all must be
+                running for the laser system to function properly. Running LightComposer
+                should start all the necessary server instances. From the LightComposer
+                user standpoint, communication occurs between the client application and
+                the LightComposer app. All the necessary backend operations are handled by LightComposer directly.
+            </p>
+
+            <h3 id="api-control-basics">API Control Basics</h3>
+            <p>
+                API control is provided via a REST interface. API calls between the client and
+                LightComposer application are sessionless, i.e., there are no handles,
+                control locks or opening/closing of devices. Multiple clients can use the REST service at the
+                same time and LightComposer GUI can be used at the same time too.
+            </p>
+            <p>
+                The remote application sends HTTP REST requests to LightComposer application. A response is sent back to the remote application as part of a HTTP exchange. The contents of REST messages are serialized using JSON.
+            </p>
+            <p>
+                Since REST commands are sessionless they are non-blocking. As a result,
+                commands that take some time to finish (e.g. set wavelength, set GDD, open
+                shutter) are only initiated by the REST command. You can track the progress
+                of these actions by repeatedly polling their status.
+            </p>
+
+            <h3 id="detailed-description-of-all-sub-services">Detailed description of all sub-services</h3>
+            <ul>
+                <li><strong><a href="Services/LightComposer-Main.html">Main control</a></strong></li>
+            </ul>
+            <p>Set wavelength, GDD, control shutters, get current device status.</p>
+            <ul>
+                <li><strong><a href="Services/LightComposer-Beam.html">Output beam steering</a></strong></li>
+            </ul>
+            <p>Advanced methods to control output beam steering and stabilization</p>
+            <ul>
+                <li><strong><a href="Services/LightComposer-PumpLaser.html">Pump Laser</a></strong></li>
+            </ul>
+            <p>Methods to control pump laser for OPA: turn on, standby, set pulse picker diver etc</p>
+            <h3 id="examples">Examples</h3>
+            <p>Will be provided later (August 2021)</p>
+            <!--<p>To get started quickly please see provided examples for these languages/tools (download link is on the top of the page):</p>
+    <ul>
+    <li>C# (.NET SDK)</li>
+    <li>Python (both .NET SDK and raw REST API examples are provided)</li>
+    <li>Visual Basic (.NET SDK)</li>
+    <li>LabVIEW (.NET SDK)</li>
+    <li>Postman (Collection)</li>
+    </ul>-->
+            <p>
+                <strong>Additionally, you don’t need a real physical device to start using API.</strong>
+                <br/>
+                In WinTopas4 application click Tools&gt;Launch Demo Device and select 'Cronus-3P' option (available first weeek August 2021). 
+                You can use this demo device just as the real physical device. Known limitations:
+            </p>
+            <ul>
+                <li>Interlock can’t be activated</li>
+                <li>Beam steering will not be available</li>
+            </ul>
+            <!--<p>When running all examples (except Postman) make sure to provide correct serial number of your own device. Place to do so is clearly marked in code, e.g</p>
+    <pre><code>static void Main (string[] args) {
+                var serialNumber = &quot;00666&quot;; //change to actual serial number of your own device.
+                var example = new Topas4SDKExample (serialNumber);
+                example.Run ();
+            }
+    </code></pre>-->
+            <h4>Postman collection</h4>
+                <p> <a href="https://app.getpostman.com/run-collection/209eb38f79cd1aaac5db"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman" /></a> </p>
+            <p>
+                A very quick and convievent way to start playing with API is to import provided Postman collection. Set correct collection environment variable “url” in Postman after you import collection to start using it with your device. It should look like <a href="http://127.0.0.1:35120/CTP21456/v0/,">http://127.0.0.1:35120/CTP21456/v0/</a> where CTP21456 is replaced with serial number of your device, and correct IP address and port is supplied too.
+            </p>
+
+          
+
+        </div>
+    </div>
+</body>
+</html>
