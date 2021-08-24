@@ -7,31 +7,29 @@
 <body>
     <div id="content">
         <div class="topOfPageHeader">
-            LightComposer Public API main help page
-
-
+            LightComposer Public API
         </div>
         <div id="out">
 
             <a href="http://www.lightcon.com">
                 <img src="assets/images/LC-logo.png" alt="Light Convestion logo" style="width: 200px" />
             </a>
-
-
             <!--<p><a href="https://github.com/DomasM/Topas4PublicAPI/archive/master.zip"><strong>Click here to download SDK as zip file</strong></a>
     (Includes examples, .NET library, and documentation for off-line reference).</p>-->
             <!--<p><a href="https://www.nuget.org/packages/LightConversion.Topas4/"><strong>Nuget package can be found here</strong></a></p>-->
             <!--<p><a href="http://topas4info.lightcon.com/?utm_source=Topas4APIPage"><strong>For general Topas4 information see here</strong></a></p>-->
-            <p><a href="https://lightconupdater.blob.core.windows.net/installers/LightComposer-setup.exe">Click here to download LightComposer application installer.</a></p>
-            <p><a href="https://lightconupdater.blob.core.windows.net/installers/WinTopas4-setup.exe">Click here to download WinTopas4 application installer.</a></p>
-            <p> <strong>Applies to LightComposer v1.7.0 and above</strong> </p>
-            <p> <strong>Preliminary</strong> </p> 
+            <p>
+                Download:
+                <a href="https://lightconupdater.blob.core.windows.net/installers/LightComposer-setup.exe">LightComposer</a>,
+                <a href="https://lightconupdater.blob.core.windows.net/installers/WinTopas4-setup.exe">WinTopas4</a>.
+            </p>
+            <p> <strong>Note: the following information applies to LightComposer v1.7.0 and above.</strong> </p>
             <h3 id="intro">Introduction</h3>
             <p>
                 LightComposer is an end-user-oriented application for controlling OPA-based
                 laser sources produced by Light Conversion. Interactive laser system
                 control via the LightComposer GUI is described in the User Manual of a
-                particular  system, this document covers local and remote control via the
+                particular system, this document covers local and remote control via the
                 LightComposer API.
             </p>
             <p>
@@ -40,21 +38,25 @@
                 LightComposer operates on top of Topas4, whose server component carries out
                 the actual hardware control. Depending on system configuration, one or more
                 Topas4 server instances are used for hardware control and all must be
-                running for the laser system to function properly. Running LightComposer
-                should start all the necessary server instances. From the LightComposer
-                user standpoint, communication occurs between the client application and
-                the LightComposer app. All the necessary backend operations are handled by LightComposer directly.
+                running for the laser system to function properly. Running the LightComposer
+                application should start all the necessary server instances. From the
+                API user standpoint, communication occurs between the client application
+                and the LightComposer app, all the necessary backend operations
+                are handled by LightComposer.
             </p>
 
             <h3 id="api-control-basics">API Control Basics</h3>
             <p>
                 API control is provided via a REST interface. API calls between the client and
-                LightComposer application are sessionless, i.e., there are no handles,
+                the LightComposer application are sessionless, i.e., there are no handles,
                 control locks or opening/closing of devices. Multiple clients can use the REST service at the
-                same time and LightComposer GUI can be used at the same time too.
+                same time, and the LightComposer GUI can be used at the same time as well.
             </p>
             <p>
-                The remote application sends HTTP REST requests to LightComposer application. A response is sent back to the remote application as part of a HTTP exchange. The contents of REST messages are serialized using JSON.
+                The remote application sends API commands as HTTP REST requests
+                to the LightComposer application. A response is sent back to
+                the remote application as part of an HTTP exchange. The
+                contents of the REST messages are serialized using JSON.
             </p>
             <p>
                 Since REST commands are sessionless they are non-blocking. As a result,
@@ -63,21 +65,24 @@
                 of these actions by repeatedly polling their status.
             </p>
 
-            <h3 id="detailed-description-of-all-sub-services">Detailed description of all sub-services</h3>
+            <h3 id="detailed-description-of-api-commands">Detailed Description of API Commands</h3>
             <ul>
                 <li><strong><a href="Services/LightComposer-Main.html">Main control</a></strong></li>
             </ul>
-            <p>Set wavelength, GDD, control shutters, get current device status.</p>
+            <p>Set wavelength and GDD, open and close shutters, and get the current device status.</p>
             <ul>
                 <li><strong><a href="Services/LightComposer-Beam.html">Output beam steering</a></strong></li>
             </ul>
-            <p>Advanced methods to control output beam steering and stabilization</p>
+            <p>
+                Configure automated output beam steering or perform direct beam
+                steering by controlling the mirror positions directly.
+            </p>
             <ul>
                 <li><strong><a href="Services/LightComposer-PumpLaser.html">Pump Laser</a></strong></li>
             </ul>
-            <p>Methods to control pump laser for OPA: turn on, standby, set pulse picker diver etc</p>
+            <p>Turn the pump laser on and off, set pulse picker and check the laser state.</p>
             <h3 id="examples">Examples</h3>
-            <p>Will be provided later (August 2021)</p>
+            <p>API use expamples in several languages will be provided at a later time (the planned relese is in August 2021). Contact support@lightcon.com if you need assistance before then.</p>
             <!--<p>To get started quickly please see provided examples for these languages/tools (download link is on the top of the page):</p>
     <ul>
     <li>C# (.NET SDK)</li>
@@ -87,15 +92,21 @@
     <li>Postman (Collection)</li>
     </ul>-->
             <p>
-                <strong>Additionally, you don’t need a real physical device to start using API.</strong>
+                <strong>You can test whether the API calls in your application
+                    are correct without a physical device.</strong>
                 <br/>
-                In WinTopas4 application click Tools&gt;Launch Demo Device and select 'Cronus-3P' option.
-                You can use this demo device just as the real physical device. Known limitations:
+                WinTopas4 supports virtual/demo devices, which accept GUI and
+                REST commands just as real devices would, with the following
+                limitations:
             </p>
             <ul>
                 <li>Interlock can’t be activated</li>
                 <li>Beam steering will not be available</li>
             </ul>
+            <p>
+                To start a virtual device, launch WinTopas4, click Tools&gt;Launch Demo Device and
+                select 'Cronus-3P'.
+            </p>
             <!--<p>When running all examples (except Postman) make sure to provide correct serial number of your own device. Place to do so is clearly marked in code, e.g</p>
     <pre><code>static void Main (string[] args) {
                 var serialNumber = &quot;00666&quot;; //change to actual serial number of your own device.
@@ -103,14 +114,33 @@
                 example.Run ();
             }
     </code></pre>-->
-            <h4>Postman collection</h4>
-                <p> <a href="https://app.getpostman.com/run-collection/209eb38f79cd1aaac5db"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman" /></a> </p>
+            <h4>Postman</h4>
+
             <p>
-                A very quick and convievent way to start playing with API is to import provided Postman collection. Set correct collection environment variable “url” in Postman after you import collection to start using it with your device. It should look like <a href="http://127.0.0.1:35120/CTP21456/v0/,">http://127.0.0.1:35120/CTP21456/v0/</a> where CTP21456 is replaced with serial number of your device, and correct IP address and port is supplied too.
+                We recommend Postman for quick and simple API testing as well
+                as to check whether the client computer can communicate with
+                the host running the LightComposer REST service at all. A
+                Postman collection is provided for this purpose.
             </p>
-
-          
-
+            <p>
+                <a href="https://app.getpostman.com/run-collection/209eb38f79cd1aaac5db"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman" /></a>
+            </p>
+            <p>
+                Make sure to set the correct URL for your device after you
+                import the collection. The URL for a an example device is:
+                <a href="http://127.0.0.1:35120/CTP21456/v0/,">http://127.0.0.1:35120/CTP21456/v0/</a>
+                where CTP21456 is the serial number of your device, 127.0.0.1
+                is the IP address (localhost, in this case) and 35120 is
+                the REST service port.
+            </p>
+            <p>
+                Postman should be your first troubelshooting step. We can only
+                offer limited support if an API command is not working in a
+                particular user application but the corresponding request
+                in Postman returns the expected result. We will ask you to
+                provide an output log from Postman when you inquire for
+                assistance, so it is best to have it before reaching out.
+            </p>
         </div>
     </div>
 </body>
