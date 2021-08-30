@@ -32,10 +32,10 @@ body{margin:0}.HttpMethod{color:#264c80;font-family:Consolas;font-size:1em;font-
 
             <div id="MethodsSubPage" class="MethodsSubPage"><p><a id="/Status"></a><p class="Uri Badge_get">/Status</p><div class="HttpMethod">Http method: GET</div><div hidden=""></div><p><p>Returns basic information about pump laser state</p>
 </p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/PumpLaser/Status</p><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
-  "IsPumpLaserReady": false,
+  "IsPumpLaserReady": true,
   "IsInTransitionalState": false,
-  "State": "South Dakota",
-  "PulsePickerDivider": 38
+  "State": "Operational",
+  "PulsePickerDivider": 10
 }</pre></p></p><p><a id="/TurnOn"></a><p class="Uri Badge_put">/TurnOn</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Turns on pump laser with required preset. If pump laser is already operational with correct preset this command takes no effect.</p>
 </p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/PumpLaser/TurnOn</p><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
   "OK": true
@@ -43,7 +43,7 @@ body{margin:0}.HttpMethod{color:#264c80;font-family:Consolas;font-size:1em;font-
 </p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/PumpLaser/Standby</p><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
   "OK": true
 }</pre></p></p><p><a id="/PulsePickerDivider"></a><p class="Uri Badge_put">/PulsePickerDivider</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Set pulse picker divider for pump laser. This will affect OPA output too. Valid values are integers. Set to 1 to emit every pulse, 2 to emit every second one, etc.</p>
-</p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/PumpLaser/PulsePickerDivider</p><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">126</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+</p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/PumpLaser/PulsePickerDivider</p><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">298</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
   "OK": true
 }</pre></p></p></div> 
 

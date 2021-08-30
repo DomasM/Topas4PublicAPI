@@ -28,7 +28,7 @@ body{margin:0}.HttpMethod{color:#264c80;font-family:Consolas;font-size:1em;font-
 
         <div id="container" style="width:100%;">
 
-            <div id="MainMethodsMenu" class="MainMethodsMenu"><div class="MainMethodsMenuItem"><a href="#/Status"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Status</div></div><div class="MainMethodsMenuItem"><a href="#/Wavelength"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">Wavelength</div></div><div class="MainMethodsMenuItem"><a href="#/WavelengthAndGDD"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">WavelengthAndGDD</div></div><div class="MainMethodsMenuItem"><a href="#/GDD"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">GDD</div></div><div class="MainMethodsMenuItem"><a href="#/OpenShutters"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">OpenShutters</div></div><div class="MainMethodsMenuItem"><a href="#/CloseShutters"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CloseShutters</div></div><div class="MainMethodsMenuItem"><a href="#/CurrentGDDRange"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">CurrentGDDRange</div></div><div class="MainMethodsMenuItem"><a href="#/WavelengthRange"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">WavelengthRange</div></div><div class="MainMethodsMenuItem"><a href="#/GDDRange"><span class="Badge Badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">GDDRange</div></div><div class="MainMethodsMenuItem"><a href="#/CenterBeam"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CenterBeam</div></div></div>
+            <div id="MainMethodsMenu" class="MainMethodsMenu"><div class="MainMethodsMenuItem"><a href="#/Status"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Status</div></div><div class="MainMethodsMenuItem"><a href="#/Info"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Info</div></div><div class="MainMethodsMenuItem"><a href="#/Wavelength"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">Wavelength</div></div><div class="MainMethodsMenuItem"><a href="#/WavelengthAndGDD"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">WavelengthAndGDD</div></div><div class="MainMethodsMenuItem"><a href="#/GDD"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">GDD</div></div><div class="MainMethodsMenuItem"><a href="#/OpenShutters"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">OpenShutters</div></div><div class="MainMethodsMenuItem"><a href="#/CloseShutters"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CloseShutters</div></div><div class="MainMethodsMenuItem"><a href="#/CurrentGDDRange"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">CurrentGDDRange</div></div><div class="MainMethodsMenuItem"><a href="#/WavelengthRange"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">WavelengthRange</div></div><div class="MainMethodsMenuItem"><a href="#/GDDRange"><span class="Badge Badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">GDDRange</div></div><div class="MainMethodsMenuItem"><a href="#/CenterBeam"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CenterBeam</div></div></div>
 
             <div id="MethodsSubPage" class="MethodsSubPage"><p><a id="/Status"></a><p class="Uri Badge_get">/Status</p><div class="HttpMethod">Http method: GET</div><div hidden=""></div><p><p>Returns device output status</p>
 </p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Main/Status</p><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
@@ -66,27 +66,33 @@ body{margin:0}.HttpMethod{color:#264c80;font-family:Consolas;font-size:1em;font-
   "IsBeamSteeringActive": false,
   "BeamPositions": [
     {
-      "Distance": 0.6298980623289,
-      "Intensity": 0.68502515870380454,
-      "X": 0.58518876162599254,
-      "Y": -0.23307870385846063
+      "Distance": 0.06379551119409306,
+      "Intensity": 0.60049239224777207,
+      "X": 0.052897027718320964,
+      "Y": -0.035661908348864832
     },
     {
-      "Distance": 0.6298980623289,
-      "Intensity": 0.68502515870380454,
-      "X": 0.58518876162599254,
-      "Y": -0.23307870385846063
+      "Distance": 0.06379551119409306,
+      "Intensity": 0.60049239224777207,
+      "X": 0.052897027718320964,
+      "Y": -0.035661908348864832
     }
   ],
   "MeasuredWavelength": 1301.2,
   "PulseDuration": 112.5,
   "Power": 1.45
-}</pre></p></p><p><a id="/Wavelength"></a><p class="Uri Badge_put">/Wavelength</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Set new wavelength in nanometers. GDD value will be selected by default logic.</p>
+}</pre></p></p><p><a id="/Info"></a><p class="Uri Badge_get">/Info</p><div class="HttpMethod">Http method: GET</div><div hidden=""></div><p><p>Returns general information about device - SN, application version, etc</p>
+</p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Main/Info</p><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+  "ApplicationVersion": "1.7.0",
+  "HasOutputBeamStabilization": true,
+  "SN": "CTP19362"
+}</pre></p></p><p><a id="/Wavelength"></a><p class="Uri Badge_put">/Wavelength</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Set new wavelength in nanometers. GDD value will be selected by default logic. Interaction is optional.</p>
 </p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Main/Wavelength</p><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">{
+  "Interaction": "IDL",
   "Wavelength": 1301.5
 }</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
   "CanSet": true
-}</pre></p></p><p><a id="/WavelengthAndGDD"></a><p class="Uri Badge_put">/WavelengthAndGDD</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Set new wavelength in nanometers with supplied GDD value.</p>
+}</pre></p></p><p><a id="/WavelengthAndGDD"></a><p class="Uri Badge_put">/WavelengthAndGDD</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Set new wavelength in nanometers with supplied GDD value. Interaction is optional.</p>
 </p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Main/WavelengthAndGDD</p><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">{
   "GDD": -12000,
   "Interaction": "IDL",
@@ -117,6 +123,7 @@ body{margin:0}.HttpMethod{color:#264c80;font-family:Consolas;font-size:1em;font-
   "Min": 1120
 }</pre></p></p><p><a id="/GDDRange"></a><p class="Uri Badge_post">/GDDRange</p><div class="HttpMethod">Http method: POST</div><div hidden=""></div><p><p>Returns calibrated GDD range for specific wavelength</p>
 </p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Main/GDDRange</p><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">{
+  "Interaction": "IDL",
   "Wavelength": 1301.5
 }</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
   "IsEmpty": false,
