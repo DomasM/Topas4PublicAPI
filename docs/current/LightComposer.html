@@ -52,6 +52,13 @@
                 control locks or opening/closing of devices. Multiple clients can use the REST service at the
                 same time, and the LightComposer GUI can be used at the same time as well.
             </p>
+			<p>
+				The REST interface can be accessed from the LightComposer GUI
+				by opening the settings menu (A) and clicking on the Remote
+				Control Help Page button (B).
+			</p>
+			<img src="assets/images/rest-help-button.png" alt="Rest button location" style="width: 500px" />
+			
             <p>
                 The remote application sends API commands as HTTP REST requests
                 to the LightComposer application. A response is sent back to
@@ -127,11 +134,10 @@
             </p>
             <p>
                 Make sure to set the correct URL for your device after you
-                import the collection. The URL for a an example device is:
-                <a href="http://127.0.0.1:35120/CTP21456/v0/,">http://127.0.0.1:35120/CTP21456/v0/</a>
-                where CTP21456 is the serial number of your device, 127.0.0.1
-                is the IP address (localhost, in this case) and 35120 is
-                the REST service port.
+                import the collection. A typical URL is: 
+				http://127.0.0.1:35120/CTP21456/v0/, where CTP21456 is the
+				serial number of your device, 127.0.0.1 is the IP address
+				(localhost, in this case) and 35120 is the REST service port.
             </p>
             <p>
                 Postman should be your first troubelshooting step. We can only
