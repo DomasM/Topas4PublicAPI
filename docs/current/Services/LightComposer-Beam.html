@@ -28,13 +28,31 @@ body{margin:0}.HttpMethod{color:#264c80;font-family:Consolas;font-size:1em;font-
 
         <div id="container" style="width:100%;">
 
-            <div id="MainMethodsMenu" class="MainMethodsMenu"><div class="MainMethodsMenuItem"><a href="#/QuadrantsExternalTriggerDelay"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">QuadrantsExternalTriggerDelay</div></div><div class="MainMethodsMenuItem"><a href="#/CenterBeam"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CenterBeam</div></div></div>
+            <div id="MainMethodsMenu" class="MainMethodsMenu"><div class="MainMethodsMenuItem"><a href="#/QuadrantsExternalTriggerDelay"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">QuadrantsExternalTriggerDelay</div></div><div class="MainMethodsMenuItem"><a href="#/CenterBeam"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CenterBeam</div></div><div class="MainMethodsMenuItem"><a href="#/MoveBeam/1"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">MoveBeam/1</div></div><div class="MainMethodsMenuItem"><a href="#/MoveBeam/2"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">MoveBeam/2</div></div><div class="MainMethodsMenuItem"><a href="#/DisableAutoBeamCentering"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">DisableAutoBeamCentering</div></div><div class="MainMethodsMenuItem"><a href="#/EnableAutoBeamCentering"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">EnableAutoBeamCentering</div></div></div>
 
             <div id="MethodsSubPage" class="MethodsSubPage"><p><a id="/QuadrantsExternalTriggerDelay"></a><p class="Uri Badge_put">/QuadrantsExternalTriggerDelay</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Set trigger delay for quadrants in microseconds, valid range is 0.01-300 us. Internal use only.</p>
-</p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Beam/QuadrantsExternalTriggerDelay</p><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">265.55412228477843</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+</p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Beam/QuadrantsExternalTriggerDelay</p><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">463.57839157040155</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
   "CanSet": true
 }</pre></p></p><p><a id="/CenterBeam"></a><p class="Uri Badge_put">/CenterBeam</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Starts beam centering procedure</p>
 </p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Beam/CenterBeam</p><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+  "OK": true
+}</pre></p></p><p><a id="/MoveBeam/1"></a><p class="Uri Badge_put">/MoveBeam/1</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Moves first beam control mirror to specified positions. Use /Main/Status .BeamMirrorPositions[0] to get current positions</p>
+</p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Beam/MoveBeam/1</p><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">{
+  "X": 0.65876313143352194,
+  "Y": -0.41866829079513823
+}</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+  "CanSet": true
+}</pre></p></p><p><a id="/MoveBeam/2"></a><p class="Uri Badge_put">/MoveBeam/2</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Moves second beam control mirror to specified positions. Use /Main/Status .BeamMirrorPositions[1] to get current positions</p>
+</p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Beam/MoveBeam/2</p><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">{
+  "X": 0.017568158459648563,
+  "Y": -0.26601723151561674
+}</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+  "CanSet": true
+}</pre></p></p><p><a id="/DisableAutoBeamCentering"></a><p class="Uri Badge_put">/DisableAutoBeamCentering</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Disables automatic beam centering after setting wavelength or GDD.</p>
+</p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Beam/DisableAutoBeamCentering</p><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+  "OK": true
+}</pre></p></p><p><a id="/EnableAutoBeamCentering"></a><p class="Uri Badge_put">/EnableAutoBeamCentering</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Enables automatic beam centering after setting wavelength or GDD.</p>
+</p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Beam/EnableAutoBeamCentering</p><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
   "OK": true
 }</pre></p></p></div> 
 

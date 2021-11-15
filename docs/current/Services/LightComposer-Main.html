@@ -28,7 +28,7 @@ body{margin:0}.HttpMethod{color:#264c80;font-family:Consolas;font-size:1em;font-
 
         <div id="container" style="width:100%;">
 
-            <div id="MainMethodsMenu" class="MainMethodsMenu"><div class="MainMethodsMenuItem"><a href="#/Status"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Status</div></div><div class="MainMethodsMenuItem"><a href="#/Info"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Info</div></div><div class="MainMethodsMenuItem"><a href="#/Wavelength"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">Wavelength</div></div><div class="MainMethodsMenuItem"><a href="#/WavelengthAndGDD"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">WavelengthAndGDD</div></div><div class="MainMethodsMenuItem"><a href="#/GDD"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">GDD</div></div><div class="MainMethodsMenuItem"><a href="#/OpenShutters"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">OpenShutters</div></div><div class="MainMethodsMenuItem"><a href="#/CloseShutters"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CloseShutters</div></div><div class="MainMethodsMenuItem"><a href="#/CurrentGDDRange"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">CurrentGDDRange</div></div><div class="MainMethodsMenuItem"><a href="#/WavelengthRange"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">WavelengthRange</div></div><div class="MainMethodsMenuItem"><a href="#/GDDRange"><span class="Badge Badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">GDDRange</div></div><div class="MainMethodsMenuItem"><a href="#/CenterBeam"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CenterBeam</div></div></div>
+            <div id="MainMethodsMenu" class="MainMethodsMenu"><div class="MainMethodsMenuItem"><a href="#/Status"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Status</div></div><div class="MainMethodsMenuItem"><a href="#/Info"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">Info</div></div><div class="MainMethodsMenuItem"><a href="#/Wavelength"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">Wavelength</div></div><div class="MainMethodsMenuItem"><a href="#/WavelengthAndGDDByPreset"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">WavelengthAndGDDByPreset</div></div><div class="MainMethodsMenuItem"><a href="#/WavelengthAndGDD"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">WavelengthAndGDD</div></div><div class="MainMethodsMenuItem"><a href="#/GDD"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">GDD</div></div><div class="MainMethodsMenuItem"><a href="#/GDDByPreset"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">GDDByPreset</div></div><div class="MainMethodsMenuItem"><a href="#/OpenShutters"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">OpenShutters</div></div><div class="MainMethodsMenuItem"><a href="#/CloseShutters"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CloseShutters</div></div><div class="MainMethodsMenuItem"><a href="#/CurrentGDDRange"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">CurrentGDDRange</div></div><div class="MainMethodsMenuItem"><a href="#/WavelengthRange"><span class="Badge Badge_get">GET</span></a><div class="MainMethodsMenuInnerItem">WavelengthRange</div></div><div class="MainMethodsMenuItem"><a href="#/GDDRange"><span class="Badge Badge_post">POST</span></a><div class="MainMethodsMenuInnerItem">GDDRange</div></div><div class="MainMethodsMenuItem"><a href="#/CenterBeam"><span class="Badge Badge_put">PUT</span></a><div class="MainMethodsMenuInnerItem">CenterBeam</div></div></div>
 
             <div id="MethodsSubPage" class="MethodsSubPage"><p><a id="/Status"></a><p class="Uri Badge_get">/Status</p><div class="HttpMethod">Http method: GET</div><div hidden=""></div><p><p>Returns device output status</p>
 </p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Main/Status</p><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
@@ -47,6 +47,7 @@ body{margin:0}.HttpMethod{color:#264c80;font-family:Consolas;font-size:1em;font-
         "IsShutterOpen": true,
         "IsHidden": false,
         "Name": "",
+        "SharedControlIDs": [ ],
         "StateExceptUntilNotice": true,
         "UntilNoticeCloseIDs": [ ]
       },
@@ -56,6 +57,7 @@ body{margin:0}.HttpMethod{color:#264c80;font-family:Consolas;font-size:1em;font-
         "IsShutterOpen": false,
         "IsHidden": false,
         "Name": "Output",
+        "SharedControlIDs": [ ],
         "StateExceptUntilNotice": true,
         "UntilNoticeCloseIDs": [
           "SettingWavelength"
@@ -66,16 +68,36 @@ body{margin:0}.HttpMethod{color:#264c80;font-family:Consolas;font-size:1em;font-
   "IsBeamSteeringActive": false,
   "BeamPositions": [
     {
-      "Distance": 0.06379551119409306,
-      "Intensity": 0.60049239224777207,
-      "X": 0.052897027718320964,
-      "Y": -0.035661908348864832
+      "Distance": 0.70979366299673519,
+      "Intensity": 0.64763018430565955,
+      "X": 0.60972632403007077,
+      "Y": -0.36337426135473616
     },
     {
-      "Distance": 0.06379551119409306,
-      "Intensity": 0.60049239224777207,
-      "X": 0.052897027718320964,
-      "Y": -0.035661908348864832
+      "Distance": 0.70979366299673519,
+      "Intensity": 0.64763018430565955,
+      "X": 0.60972632403007077,
+      "Y": -0.36337426135473616
+    }
+  ],
+  "BeamMirrorActualPositions": [
+    {
+      "X": 0.60972632403007077,
+      "Y": -0.36337426135473616
+    },
+    {
+      "X": 0.60972632403007077,
+      "Y": -0.36337426135473616
+    }
+  ],
+  "BeamMirrorTargetPositions": [
+    {
+      "X": 0.60972632403007077,
+      "Y": -0.36337426135473616
+    },
+    {
+      "X": 0.60972632403007077,
+      "Y": -0.36337426135473616
     }
   ],
   "MeasuredWavelength": 1301.2,
@@ -92,6 +114,13 @@ body{margin:0}.HttpMethod{color:#264c80;font-family:Consolas;font-size:1em;font-
   "Wavelength": 1301.5
 }</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
   "CanSet": true
+}</pre></p></p><p><a id="/WavelengthAndGDDByPreset"></a><p class="Uri Badge_put">/WavelengthAndGDDByPreset</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Set new wavelength in nanometers. GDD value will be calculated from the supplied GDD preset curve. Interaction is optional.</p>
+</p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Main/WavelengthAndGDDByPreset</p><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">{
+  "GDDPresetCuve": "40X OBJECTIVE",
+  "Interaction": "",
+  "Wavelength": 1700
+}</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+  "CanSet": true
 }</pre></p></p><p><a id="/WavelengthAndGDD"></a><p class="Uri Badge_put">/WavelengthAndGDD</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Set new wavelength in nanometers with supplied GDD value. Interaction is optional.</p>
 </p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Main/WavelengthAndGDD</p><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">{
   "GDD": -12000,
@@ -105,10 +134,15 @@ body{margin:0}.HttpMethod{color:#264c80;font-family:Consolas;font-size:1em;font-
   "GDD": -12000
 }</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
   "CanSet": true
-}</pre></p></p><p><a id="/OpenShutters"></a><p class="Uri Badge_put">/OpenShutters</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Open main shutter and output shutter</p>
+}</pre></p></p><p><a id="/GDDByPreset"></a><p class="Uri Badge_put">/GDDByPreset</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Set new GDD for currently set wavelength using supplied GDD preset curve.</p>
+</p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Main/GDDByPreset</p><div hidden=""></div><p><div>Request JSON body example: </div><pre class="pre-scrollable RequestJsonExample">{
+  "GDDPresetCuve": "40X OBJECTIVE"
+}</pre></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
+  "CanSet": true
+}</pre></p></p><p><a id="/OpenShutters"></a><p class="Uri Badge_put">/OpenShutters</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Open all shutters required for output to leave device.</p>
 </p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Main/OpenShutters</p><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
   "OK": true
-}</pre></p></p><p><a id="/CloseShutters"></a><p class="Uri Badge_put">/CloseShutters</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Close main shutter and output shutter</p>
+}</pre></p></p><p><a id="/CloseShutters"></a><p class="Uri Badge_put">/CloseShutters</p><div class="HttpMethod">Http method: PUT</div><div hidden=""></div><p><p>Closes all  shutters.</p>
 </p><p class="FullUri">Uri: http://127.0.0.1:35120/YourDeviceSerialNumber/v0/Main/CloseShutters</p><div hidden=""></div><p><div>Request body is empty.</div></p><p><div>Response JSON body example: </div><pre class="pre-scrollable ResponseJsonExample">{
   "OK": true
 }</pre></p></p><p><a id="/CurrentGDDRange"></a><p class="Uri Badge_get">/CurrentGDDRange</p><div class="HttpMethod">Http method: GET</div><div hidden=""></div><p><p>Returns calibrated GDD range for currently set wavelength</p>
