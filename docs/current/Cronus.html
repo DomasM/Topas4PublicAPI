@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cronus Public API Main page</title>
+    <link rel="stylesheet" type="text/css" href="assets\CommonStyle.css" />
+</head>
+<body>
+    <div id="content">
+        <div class="topOfPageHeader">
+            Cronus Public API
+        </div>
+        <div id="out">
+
+            <a href="http://www.lightcon.com">
+                <img src="assets/images/LC-logo.png" alt="Light Convestion logo" style="width: 200px" />
+            </a>
+            <!--<p><a href="https://github.com/DomasM/Topas4PublicAPI/archive/master.zip"><strong>Click here to download SDK as zip file</strong></a>
+    (Includes examples, .NET library, and documentation for off-line reference).</p>-->
+            <!--<p><a href="https://www.nuget.org/packages/LightConversion.Topas4/"><strong>Nuget package can be found here</strong></a></p>-->
+            <!--<p><a href="http://topas4info.lightcon.com/?utm_source=Topas4APIPage"><strong>For general Topas4 information see here</strong></a></p>-->
+            <p>
+                Download:
+                <a href="https://lightconupdater.blob.core.windows.net/installers/Cronus-Demo-setup.exe">Special Demo Cronus software for development without physical device</a>
+                <div style="color:red;">
+                    Demo software should only be installed and used on users PC, not the internal Cronus PC if you already have the physical device.
+                </div>
+            </p>
+            <p> <strong>Note: the following information applies to Cronus v0.76.0 and above.</strong> </p>
+            <h3 id="intro">Introduction</h3>
+            <p>
+                Cronus control application is an end-user-oriented application for controlling OPO-based
+                laser sources produced by Light Conversion. Interactive laser system
+                control via the Cronus GUI is described in the User Manual of a
+                particular system, this document covers local and remote control via the
+                Cronus API.
+            </p>
+            <p>
+                Cronus provides a GUI for interactive laser system control and an
+                API service for remote control, automation and advanced applications.
+                Cronus operates on top of Topas4, whose server component carries out
+                the actual hardware control. Depending on system configuration, one or more
+                Topas4 server instances are used for hardware control and all must be
+                running for the laser system to function properly. Running the Cronus
+                application should start all the necessary server instances. From the
+                API user standpoint, communication occurs between the client application
+                and the Cronus app, all the necessary backend operations
+                are handled by Cronus.
+            </p>
+
+            <h3 id="api-control-basics">API Control Basics</h3>
+            <p>
+                API control is provided via a REST interface and COM port. COM port control is considered legacy method and is described <a href="https://gist.github.com/DomasM/2f802a24d4a354b020b66f2d89267003">here</a> API calls between the client and
+                the Cronus application are sessionless, i.e., there are no handles,
+                control locks or opening/closing of devices. Multiple clients can use the REST service at the
+                same time, and the Cronus GUI can be used at the same time as well.
+            </p>
+            <!--<p>
+        Local help file for remote control can be found at C:\Programs\Cronus\ if Cronus application is running
+    </p>-->
+
+            <p>
+                The remote application sends API commands as HTTP REST requests
+                to the Cronus application. A response is sent back to
+                the remote application as part of an HTTP exchange. The
+                contents of the REST messages are serialized using JSON.
+            </p>
+            <p>
+                Since REST commands are sessionless they are non-blocking. As a result,
+                commands that take some time to finish (e.g. set wavelength, set GDD, open
+                shutter) are only initiated by the REST command. You can track the progress
+                of these actions by repeatedly polling their status.
+            </p>
+
+            <h3 id="detailed-description-of-api-commands">Detailed Description of API Commands</h3>
+            <ul>
+                <li><strong><a href="Services/Cronus.html">General device control</a></strong></li>
+            </ul>
+            <p>Set Power Mode, etc</p>
+            <ul>
+                <li><strong><a href="Services/Cronus-Ch1.html">First output channel</a></strong></li>
+            </ul>
+            <p>
+                Control the first output channel tunable in 680-960 nm range
+            </p>
+            <ul>
+                <li><strong><a href="Services/Cronus-Ch2.html">Second output channel</a></strong></li>
+            </ul>
+            <p>
+                Control the second output channel tunable in 960-1300 nm range. Commands are identical as for the first channel.
+            </p>
+            <ul>
+                <li><strong><a href="Services/Cronus-Ch3.html">Third output channel</a></strong></li>
+            </ul>
+            <p>
+                Control the third output channel fixed at 1025 nm
+            </p>
+        </div>
+    </div>
+</body>
+</html>
